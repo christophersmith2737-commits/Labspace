@@ -23,6 +23,7 @@ import {
   DoorOpen,
   Download,
   Edit3,
+  FileSpreadsheet,
   FlaskConical,
   FolderOpen,
   GlassWater,
@@ -470,6 +471,13 @@ export function LabSpaceApp() {
       ) ?? [],
     [data],
   );
+  const medicineCatalogCount = useMemo(
+    () =>
+      data?.items.filter((item) =>
+        item.id.startsWith("medicine-261021-item-"),
+      ).length ?? 0,
+    [data],
+  );
 
   const containerPath = (containerId: string | null) => {
     const chain: ContainerNode[] = [];
@@ -666,8 +674,18 @@ export function LabSpaceApp() {
           <Dashboard
             data={data}
             lowItems={lowItems}
+            medicineCatalogCount={medicineCatalogCount}
             onRoom={navigateRoom}
             onAddRoom={() => setModal({ type: "room" })}
+            onImportMedicineCatalog={() =>
+              void mutate(
+                "importMedicineCatalog",
+                {},
+                medicineCatalogCount
+                  ? "药品清单缺失条目已补齐"
+                  : "药品清单已导入",
+              )
+            }
           />
         )}
         {view === "browse" && (
@@ -835,13 +853,17 @@ export function LabSpaceApp() {
 function Dashboard({
   data,
   lowItems,
+  medicineCatalogCount,
   onRoom,
   onAddRoom,
+  onImportMedicineCatalog,
 }: {
   data: AppState;
   lowItems: Item[];
+  medicineCatalogCount: number;
   onRoom: (id: string) => void;
   onAddRoom: () => void;
+  onImportMedicineCatalog: () => void;
 }) {
   return (
     <div className="mx-auto max-w-[1220px] p-5 pb-28 md:p-8">
@@ -863,6 +885,41 @@ function Dashboard({
           新建房间
         </button>
       </div>
+      <section className="card mb-5 overflow-hidden border-emerald-200/70 bg-gradient-to-br from-emerald-50/90 to-cyan-50/70 p-5 dark:border-emerald-900/70 dark:from-emerald-950/25 dark:to-cyan-950/20">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex min-w-0 items-start gap-4">
+            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-emerald-600 text-white">
+              <FileSpreadsheet size={23} />
+            </div>
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-2">
+                <h2 className="font-semibold">261021 更新药品清单</h2>
+                <span className="rounded-full bg-white/80 px-2 py-1 text-xs font-medium text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
+                  已录入 {medicineCatalogCount}/151
+                </span>
+              </div>
+              <p className="muted mt-1 text-sm">
+                105 药品柜 111 条 · 103 药品柜 40 条 · 共 8 个分区
+              </p>
+              <p className="muted mt-1 text-xs">
+                原名称与数量写法保留；疑似错别字未自动修改。
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={onImportMedicineCatalog}
+            disabled={medicineCatalogCount >= 151}
+            className="h-11 shrink-0 rounded-xl bg-emerald-600 px-4 text-sm font-semibold text-white disabled:cursor-default disabled:bg-emerald-600/55"
+          >
+            {medicineCatalogCount >= 151
+              ? "清单已导入"
+              : medicineCatalogCount
+                ? "补齐缺失条目"
+                : "导入到 LabSpace"}
+          </button>
+        </div>
+      </section>
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         <Stat
           label="房间"

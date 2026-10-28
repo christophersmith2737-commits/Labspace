@@ -1,5 +1,6 @@
 import { and, asc, desc, eq, inArray } from "drizzle-orm";
 import { getDb } from "../../../db";
+import medicineCatalog from "../../../data/medicine-catalog-261021.json";
 import {
   activityLogs,
   containers,
@@ -532,6 +533,83 @@ export async function POST(request: Request) {
         before,
       });
       await db.delete(items).where(eq(items.id, itemId));
+    } else if (action === "importMedicineCatalog") {
+      const [existingRoomRows, existingContainerRows, existingItemRows] =
+        await Promise.all([
+          db.select({ id: rooms.id }).from(rooms),
+          db.select({ id: containers.id }).from(containers),
+          db.select({ id: items.id }).from(items),
+        ]);
+      const existingRoomIds = new Set(existingRoomRows.map((row) => row.id));
+      const existingContainerIds = new Set(
+        existingContainerRows.map((row) => row.id),
+      );
+      const existingItemIds = new Set(existingItemRows.map((row) => row.id));
+      const missingRooms = medicineCatalog.rooms
+        .filter((room) => !existingRoomIds.has(room.id))
+        .map((room) => ({
+          id: room.id,
+          workspaceId: WORKSPACE_ID,
+          name: room.name,
+          icon: room.icon,
+          color: room.color,
+          description: room.description,
+        }));
+      const missingContainers = medicineCatalog.containers
+        .filter((container) => !existingContainerIds.has(container.id))
+        .map((container) => ({
+          id: container.id,
+          roomId: container.roomId,
+          parentId: null,
+          name: container.name,
+          type: "shelf",
+          icon: container.icon,
+          color: container.color,
+          description: container.description,
+          sortOrder: container.sortOrder,
+        }));
+      const missingItems = medicineCatalog.items
+        .filter((item) => !existingItemIds.has(item.id))
+        .map((item) => ({
+          id: item.id,
+          roomId: item.roomId,
+          containerId: item.containerId,
+          name: item.name,
+          icon: item.icon,
+          iconColor: item.iconColor,
+          category: item.category,
+          stockEnabled: true,
+          stockMode: "quantity",
+          stockPercent: 100,
+          initialQuantity: item.quantity,
+          currentQuantity: item.quantity,
+          unit: item.unit,
+          brand: "",
+          specification: "",
+          casNumber: "",
+          expiryDate: null,
+          notes: `原表数量：${item.quantityRaw}；原表位置：${item.sourceSection}（${item.sourceCell}）；来源：${medicineCatalog.source.fileName}。名称按原表保留，未自动修正。`,
+        }));
+
+      if (missingRooms.length) await db.insert(rooms).values(missingRooms);
+      if (missingContainers.length)
+        await db.insert(containers).values(missingContainers);
+      for (let start = 0; start < missingItems.length; start += 5) {
+        await db.insert(items).values(missingItems.slice(start, start + 5));
+      }
+      if (missingRooms.length || missingContainers.length || missingItems.length)
+        await log(db, {
+          action,
+          entityType: "catalog",
+          entityId: "medicine-catalog-261021",
+          entityName: medicineCatalog.source.title,
+          message: `导入药品清单：新增 ${missingItems.length} 条物品、${missingContainers.length} 个分区`,
+          after: {
+            rooms: missingRooms.length,
+            containers: missingContainers.length,
+            items: missingItems.length,
+          },
+        });
     } else if (action === "updateSettings") {
       const [before] = await db
         .select()
