@@ -115,8 +115,242 @@ function Icon({
   size?: number;
   color?: string;
 }) {
+  if (name.startsWith("mc:")) {
+    const slug = name.slice(3);
+    return (
+      // Static pixel-art assets should bypass image optimization to preserve crisp edges.
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={`/icons/minecraft/${slug}.png`}
+        alt=""
+        width={size}
+        height={size}
+        draggable={false}
+        style={{ imageRendering: "pixelated", objectFit: "contain" }}
+      />
+    );
+  }
   const Component = icons[name] ?? Package;
   return <Component size={size} strokeWidth={1.8} color={color} />;
+}
+
+type MinecraftIconEntry = { id: string; file: string };
+
+const popularMinecraftIcons = [
+  "glass_bottle",
+  "potion",
+  "honey_bottle",
+  "bucket",
+  "water_bucket",
+  "milk_bucket",
+  "paper",
+  "book",
+  "written_book",
+  "compass",
+  "clock",
+  "spyglass",
+  "brush",
+  "shears",
+  "flint_and_steel",
+  "iron_ingot",
+  "copper_ingot",
+  "gold_ingot",
+  "diamond",
+  "emerald",
+  "redstone",
+  "quartz",
+  "amethyst_shard",
+  "slime_ball",
+  "ender_pearl",
+  "chest",
+  "red_bed",
+  "oak_door",
+];
+
+const minecraftSearchAliases: Record<string, string[]> = {
+  瓶: ["bottle", "potion"],
+  烧瓶: ["bottle", "potion"],
+  药水: ["potion"],
+  桶: ["bucket"],
+  书: ["book"],
+  纸: ["paper", "map"],
+  箱: ["chest", "box"],
+  床: ["bed"],
+  门: ["door"],
+  工具: ["pickaxe", "axe", "shovel", "hoe", "shears", "brush"],
+  剪刀: ["shears"],
+  刷子: ["brush"],
+  指南针: ["compass"],
+  钟: ["clock"],
+  望远镜: ["spyglass"],
+  钻石: ["diamond"],
+  铁: ["iron"],
+  铜: ["copper"],
+  金: ["gold"],
+  粉末: ["dust", "powder", "redstone"],
+  玻璃: ["glass"],
+  地图: ["map"],
+  旗帜: ["banner"],
+  食物: ["apple", "bread", "carrot", "potato", "beef", "chicken"],
+};
+
+function IconPicker({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const [library, setLibrary] = useState<"lucide" | "minecraft">(
+    value.startsWith("mc:") ? "minecraft" : "lucide",
+  );
+  const [query, setQuery] = useState("");
+  const [minecraftIcons, setMinecraftIcons] = useState<MinecraftIconEntry[]>(
+    [],
+  );
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (library !== "minecraft" || minecraftIcons.length) return;
+    const timer = window.setTimeout(() => {
+      setLoading(true);
+      fetch("/icons/minecraft/manifest.json")
+        .then(
+          async (response) =>
+            (await response.json()) as { items?: MinecraftIconEntry[] },
+        )
+        .then((manifest) => setMinecraftIcons(manifest.items ?? []))
+        .catch(() => toast.error("物品图标库加载失败"))
+        .finally(() => setLoading(false));
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [library, minecraftIcons.length]);
+
+  const visibleMinecraftIcons = useMemo(() => {
+    const normalized = query.trim().toLowerCase();
+    const aliases = Object.entries(minecraftSearchAliases)
+      .filter(
+        ([chinese]) =>
+          chinese.includes(normalized) || normalized.includes(chinese),
+      )
+      .flatMap(([, terms]) => terms);
+    const bySlug = new Map(
+      minecraftIcons.map((entry) => [
+        entry.id.replace("minecraft:", ""),
+        entry,
+      ]),
+    );
+    const ordered = [
+      ...popularMinecraftIcons.map((slug) => bySlug.get(slug)).filter(Boolean),
+      ...minecraftIcons.filter(
+        (entry) =>
+          !popularMinecraftIcons.includes(entry.id.replace("minecraft:", "")),
+      ),
+    ] as MinecraftIconEntry[];
+    return ordered
+      .filter((entry) => {
+        if (!normalized) return true;
+        const slug = entry.id.replace("minecraft:", "").toLowerCase();
+        return (
+          slug.includes(normalized) ||
+          aliases.some((term) => slug.includes(term))
+        );
+      })
+      .slice(0, 120);
+  }, [minecraftIcons, query]);
+
+  return (
+    <div className="mt-5">
+      <div className="flex items-center justify-between gap-3">
+        <div className="text-sm font-medium">图标库</div>
+        <div className="flex rounded-xl bg-[var(--panel-2)] p-1 text-xs">
+          <button
+            type="button"
+            onClick={() => setLibrary("lucide")}
+            className={`rounded-lg px-3 py-1.5 ${library === "lucide" ? "bg-[var(--panel)] font-medium shadow-sm" : "muted"}`}
+          >
+            基础图标
+          </button>
+          <button
+            type="button"
+            onClick={() => setLibrary("minecraft")}
+            className={`rounded-lg px-3 py-1.5 ${library === "minecraft" ? "bg-[var(--panel)] font-medium shadow-sm" : "muted"}`}
+          >
+            物品贴纸 · 802
+          </button>
+        </div>
+      </div>
+
+      {library === "minecraft" && (
+        <div className="relative mt-3">
+          <Search
+            size={16}
+            className="muted absolute left-3 top-1/2 -translate-y-1/2"
+          />
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="搜索：瓶、工具、diamond、bucket…"
+            className="h-10 w-full rounded-xl border border-[var(--line)] bg-[var(--panel)] pl-9 pr-3 text-sm outline-none focus:border-blue-500"
+          />
+        </div>
+      )}
+
+      <div className="mt-3 grid max-h-[260px] grid-cols-7 gap-2 overflow-auto rounded-2xl border border-[var(--line)] p-2 thin-scroll sm:grid-cols-9">
+        {library === "lucide" &&
+          iconChoices.map((name) => (
+            <button
+              type="button"
+              key={name}
+              title={name}
+              aria-label={`选择 ${name} 图标`}
+              onClick={() => onChange(name)}
+              className={`grid aspect-square place-items-center rounded-xl border ${value === name ? "border-blue-500 bg-[var(--blue-soft)] text-[var(--blue)]" : "border-transparent hover:bg-[var(--panel-2)]"}`}
+            >
+              <Icon name={name} size={20} />
+            </button>
+          ))}
+
+        {library === "minecraft" && loading && (
+          <div className="muted col-span-full py-10 text-center text-sm">
+            正在加载物品贴纸…
+          </div>
+        )}
+        {library === "minecraft" &&
+          !loading &&
+          visibleMinecraftIcons.map((entry) => {
+            const slug = entry.id.replace("minecraft:", "");
+            const iconValue = `mc:${slug}`;
+            return (
+              <button
+                type="button"
+                key={entry.id}
+                title={slug.replaceAll("_", " ")}
+                aria-label={`选择 ${slug} 物品贴纸`}
+                onClick={() => onChange(iconValue)}
+                className={`grid aspect-square place-items-center rounded-xl border p-1 ${value === iconValue ? "border-blue-500 bg-[var(--blue-soft)]" : "border-transparent hover:bg-[var(--panel-2)]"}`}
+              >
+                <Icon name={iconValue} size={34} />
+              </button>
+            );
+          })}
+        {library === "minecraft" &&
+          !loading &&
+          !visibleMinecraftIcons.length && (
+            <div className="muted col-span-full py-10 text-center text-sm">
+              没有找到匹配的图标
+            </div>
+          )}
+      </div>
+      {library === "minecraft" &&
+        !loading &&
+        visibleMinecraftIcons.length >= 120 && (
+          <p className="muted mt-2 text-xs">
+            当前显示前 120 项，可输入关键词缩小范围。
+          </p>
+        )}
+    </div>
+  );
 }
 
 function stockColor(value: number) {
@@ -1770,21 +2004,7 @@ function EntityForm({
           </select>
         </label>
       )}
-      <div className="mt-5">
-        <div className="text-sm font-medium">图标</div>
-        <div className="mt-2 grid grid-cols-8 gap-2">
-          {iconChoices.slice(0, 16).map((name) => (
-            <button
-              type="button"
-              key={name}
-              onClick={() => setIcon(name)}
-              className={`grid aspect-square place-items-center rounded-xl border ${icon === name ? "border-blue-500 bg-[var(--blue-soft)] text-[var(--blue)]" : "border-[var(--line)]"}`}
-            >
-              <Icon name={name} size={18} />
-            </button>
-          ))}
-        </div>
-      </div>
+      <IconPicker value={icon} onChange={setIcon} />
       <div className="mt-4 flex gap-2">
         {colors.map((c) => (
           <button

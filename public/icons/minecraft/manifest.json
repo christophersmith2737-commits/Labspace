@@ -1,0 +1,5627 @@
+{
+  "minecraft_version": "26.3",
+  "edition": "Java",
+  "image_count": 802,
+  "image_format": "PNG",
+  "image_size": "256x256",
+  "images_edited": false,
+  "source_repository": "https://github.com/Owen1212055/mc-assets",
+  "source_commit": "bc96011714c0eb3770bd641a3b86459ad5f860c7",
+  "selection": "Non-block item models plus special bed and banner inventory items; pure block models excluded.",
+  "items": [
+    {
+      "id": "minecraft:abandoned_camp_map",
+      "file": "icons/abandoned_camp_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:acacia_boat",
+      "file": "icons/acacia_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:acacia_chest_boat",
+      "file": "icons/acacia_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:acacia_door",
+      "file": "icons/acacia_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:acacia_hanging_sign",
+      "file": "icons/acacia_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:acacia_sapling",
+      "file": "icons/acacia_sapling.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:acacia_sign",
+      "file": "icons/acacia_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:activator_rail",
+      "file": "icons/activator_rail.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:allay_spawn_egg",
+      "file": "icons/allay_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:allium",
+      "file": "icons/allium.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:amethyst_cluster",
+      "file": "icons/amethyst_cluster.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:amethyst_shard",
+      "file": "icons/amethyst_shard.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:angler_pottery_sherd",
+      "file": "icons/angler_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:apple",
+      "file": "icons/apple.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:archer_pottery_sherd",
+      "file": "icons/archer_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:armadillo_scute",
+      "file": "icons/armadillo_scute.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:armadillo_spawn_egg",
+      "file": "icons/armadillo_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:armor_stand",
+      "file": "icons/armor_stand.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:arms_up_pottery_sherd",
+      "file": "icons/arms_up_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:arrow",
+      "file": "icons/arrow.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:axolotl_bucket",
+      "file": "icons/axolotl_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:axolotl_spawn_egg",
+      "file": "icons/axolotl_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:azure_bluet",
+      "file": "icons/azure_bluet.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:baked_potato",
+      "file": "icons/baked_potato.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bamboo_chest_raft",
+      "file": "icons/bamboo_chest_raft.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bamboo_door",
+      "file": "icons/bamboo_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bamboo_hanging_sign",
+      "file": "icons/bamboo_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bamboo_raft",
+      "file": "icons/bamboo_raft.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bamboo_sign",
+      "file": "icons/bamboo_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bamboo",
+      "file": "icons/bamboo.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:barrier",
+      "file": "icons/barrier.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bat_spawn_egg",
+      "file": "icons/bat_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bee_spawn_egg",
+      "file": "icons/bee_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:beef",
+      "file": "icons/beef.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:beetroot_seeds",
+      "file": "icons/beetroot_seeds.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:beetroot_soup",
+      "file": "icons/beetroot_soup.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:beetroot",
+      "file": "icons/beetroot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bell",
+      "file": "icons/bell.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:birch_boat",
+      "file": "icons/birch_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:birch_chest_boat",
+      "file": "icons/birch_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:birch_door",
+      "file": "icons/birch_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:birch_hanging_sign",
+      "file": "icons/birch_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:birch_sapling",
+      "file": "icons/birch_sapling.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:birch_sign",
+      "file": "icons/birch_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:black_banner",
+      "file": "icons/black_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:black_bed",
+      "file": "icons/black_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:black_bundle",
+      "file": "icons/black_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:black_candle",
+      "file": "icons/black_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:black_cushion",
+      "file": "icons/black_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:black_dye",
+      "file": "icons/black_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:black_harness",
+      "file": "icons/black_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:black_shulker_box",
+      "file": "icons/black_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:black_stained_glass_pane",
+      "file": "icons/black_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blade_pottery_sherd",
+      "file": "icons/blade_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blaze_powder",
+      "file": "icons/blaze_powder.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blaze_rod",
+      "file": "icons/blaze_rod.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blaze_spawn_egg",
+      "file": "icons/blaze_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blue_banner",
+      "file": "icons/blue_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:blue_bed",
+      "file": "icons/blue_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:blue_bundle",
+      "file": "icons/blue_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blue_candle",
+      "file": "icons/blue_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blue_cushion",
+      "file": "icons/blue_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blue_dye",
+      "file": "icons/blue_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blue_egg",
+      "file": "icons/blue_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blue_harness",
+      "file": "icons/blue_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blue_orchid",
+      "file": "icons/blue_orchid.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blue_shulker_box",
+      "file": "icons/blue_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:blue_stained_glass_pane",
+      "file": "icons/blue_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bogged_spawn_egg",
+      "file": "icons/bogged_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bolt_armor_trim_smithing_template",
+      "file": "icons/bolt_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bone_meal",
+      "file": "icons/bone_meal.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bone",
+      "file": "icons/bone.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:book",
+      "file": "icons/book.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bordure_indented_banner_pattern",
+      "file": "icons/bordure_indented_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bow",
+      "file": "icons/bow.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bowl",
+      "file": "icons/bowl.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brain_coral_fan",
+      "file": "icons/brain_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brain_coral",
+      "file": "icons/brain_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bread",
+      "file": "icons/bread.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:breeze_rod",
+      "file": "icons/breeze_rod.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:breeze_spawn_egg",
+      "file": "icons/breeze_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brewer_pottery_sherd",
+      "file": "icons/brewer_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brewing_stand",
+      "file": "icons/brewing_stand.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brick",
+      "file": "icons/brick.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brown_banner",
+      "file": "icons/brown_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:brown_bed",
+      "file": "icons/brown_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:brown_bundle",
+      "file": "icons/brown_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brown_candle",
+      "file": "icons/brown_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brown_cushion",
+      "file": "icons/brown_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brown_dye",
+      "file": "icons/brown_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brown_egg",
+      "file": "icons/brown_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brown_harness",
+      "file": "icons/brown_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brown_mushroom",
+      "file": "icons/brown_mushroom.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brown_shulker_box",
+      "file": "icons/brown_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brown_stained_glass_pane",
+      "file": "icons/brown_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:brush",
+      "file": "icons/brush.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bubble_coral_fan",
+      "file": "icons/bubble_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bubble_coral",
+      "file": "icons/bubble_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bucket",
+      "file": "icons/bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bundle",
+      "file": "icons/bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:buried_ancient_city_map",
+      "file": "icons/buried_ancient_city_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:buried_mineshaft_map",
+      "file": "icons/buried_mineshaft_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:buried_treasure_map",
+      "file": "icons/buried_treasure_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:buried_trial_chambers_map",
+      "file": "icons/buried_trial_chambers_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:burn_pottery_sherd",
+      "file": "icons/burn_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:bush",
+      "file": "icons/bush.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cactus_flower",
+      "file": "icons/cactus_flower.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cake",
+      "file": "icons/cake.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:camel_husk_spawn_egg",
+      "file": "icons/camel_husk_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:camel_spawn_egg",
+      "file": "icons/camel_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:campfire",
+      "file": "icons/campfire.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:candle",
+      "file": "icons/candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:carrot_on_a_stick",
+      "file": "icons/carrot_on_a_stick.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:carrot",
+      "file": "icons/carrot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cat_spawn_egg",
+      "file": "icons/cat_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cauldron",
+      "file": "icons/cauldron.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cave_spider_spawn_egg",
+      "file": "icons/cave_spider_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:chainmail_boots",
+      "file": "icons/chainmail_boots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:chainmail_chestplate",
+      "file": "icons/chainmail_chestplate.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:chainmail_helmet",
+      "file": "icons/chainmail_helmet.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:chainmail_leggings",
+      "file": "icons/chainmail_leggings.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:charcoal",
+      "file": "icons/charcoal.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cherry_boat",
+      "file": "icons/cherry_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cherry_chest_boat",
+      "file": "icons/cherry_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cherry_door",
+      "file": "icons/cherry_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cherry_hanging_sign",
+      "file": "icons/cherry_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cherry_sapling",
+      "file": "icons/cherry_sapling.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cherry_sign",
+      "file": "icons/cherry_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:chest_minecart",
+      "file": "icons/chest_minecart.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:chest",
+      "file": "icons/chest.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:chicken_spawn_egg",
+      "file": "icons/chicken_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:chicken",
+      "file": "icons/chicken.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:chorus_fruit",
+      "file": "icons/chorus_fruit.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:clay_ball",
+      "file": "icons/clay_ball.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:closed_eyeblossom",
+      "file": "icons/closed_eyeblossom.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:coal",
+      "file": "icons/coal.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:coast_armor_trim_smithing_template",
+      "file": "icons/coast_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cobweb",
+      "file": "icons/cobweb.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cocoa_beans",
+      "file": "icons/cocoa_beans.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cod_bucket",
+      "file": "icons/cod_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cod_spawn_egg",
+      "file": "icons/cod_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cod",
+      "file": "icons/cod.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:command_block_minecart",
+      "file": "icons/command_block_minecart.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:comparator",
+      "file": "icons/comparator.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:conduit",
+      "file": "icons/conduit.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cooked_beef",
+      "file": "icons/cooked_beef.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cooked_chicken",
+      "file": "icons/cooked_chicken.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cooked_cod",
+      "file": "icons/cooked_cod.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cooked_mutton",
+      "file": "icons/cooked_mutton.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cooked_porkchop",
+      "file": "icons/cooked_porkchop.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cooked_rabbit",
+      "file": "icons/cooked_rabbit.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cooked_salmon",
+      "file": "icons/cooked_salmon.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cookie",
+      "file": "icons/cookie.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_axe",
+      "file": "icons/copper_axe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_bars",
+      "file": "icons/copper_bars.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_boots",
+      "file": "icons/copper_boots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_chain",
+      "file": "icons/copper_chain.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_chest",
+      "file": "icons/copper_chest.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_chestplate",
+      "file": "icons/copper_chestplate.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_door",
+      "file": "icons/copper_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_golem_spawn_egg",
+      "file": "icons/copper_golem_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_helmet",
+      "file": "icons/copper_helmet.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_hoe",
+      "file": "icons/copper_hoe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_horse_armor",
+      "file": "icons/copper_horse_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_ingot",
+      "file": "icons/copper_ingot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_lantern",
+      "file": "icons/copper_lantern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_leggings",
+      "file": "icons/copper_leggings.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_nautilus_armor",
+      "file": "icons/copper_nautilus_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_nugget",
+      "file": "icons/copper_nugget.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_pickaxe",
+      "file": "icons/copper_pickaxe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_shovel",
+      "file": "icons/copper_shovel.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_spear",
+      "file": "icons/copper_spear.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_sword",
+      "file": "icons/copper_sword.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:copper_torch",
+      "file": "icons/copper_torch.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cornflower",
+      "file": "icons/cornflower.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cow_spawn_egg",
+      "file": "icons/cow_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:creaking_spawn_egg",
+      "file": "icons/creaking_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:creeper_banner_pattern",
+      "file": "icons/creeper_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:creeper_spawn_egg",
+      "file": "icons/creeper_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:crimson_door",
+      "file": "icons/crimson_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:crimson_fungus",
+      "file": "icons/crimson_fungus.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:crimson_hanging_sign",
+      "file": "icons/crimson_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:crimson_roots",
+      "file": "icons/crimson_roots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:crimson_sign",
+      "file": "icons/crimson_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:crossbow",
+      "file": "icons/crossbow.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cyan_banner",
+      "file": "icons/cyan_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:cyan_bed",
+      "file": "icons/cyan_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:cyan_bundle",
+      "file": "icons/cyan_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cyan_candle",
+      "file": "icons/cyan_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cyan_cushion",
+      "file": "icons/cyan_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cyan_dye",
+      "file": "icons/cyan_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cyan_harness",
+      "file": "icons/cyan_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cyan_shulker_box",
+      "file": "icons/cyan_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:cyan_stained_glass_pane",
+      "file": "icons/cyan_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dandelion",
+      "file": "icons/dandelion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:danger_pottery_sherd",
+      "file": "icons/danger_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dark_oak_boat",
+      "file": "icons/dark_oak_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dark_oak_chest_boat",
+      "file": "icons/dark_oak_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dark_oak_door",
+      "file": "icons/dark_oak_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dark_oak_hanging_sign",
+      "file": "icons/dark_oak_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dark_oak_sapling",
+      "file": "icons/dark_oak_sapling.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dark_oak_sign",
+      "file": "icons/dark_oak_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_brain_coral_fan",
+      "file": "icons/dead_brain_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_brain_coral",
+      "file": "icons/dead_brain_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_bubble_coral_fan",
+      "file": "icons/dead_bubble_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_bubble_coral",
+      "file": "icons/dead_bubble_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_bush",
+      "file": "icons/dead_bush.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_fire_coral_fan",
+      "file": "icons/dead_fire_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_fire_coral",
+      "file": "icons/dead_fire_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_horn_coral_fan",
+      "file": "icons/dead_horn_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_horn_coral",
+      "file": "icons/dead_horn_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_tube_coral_fan",
+      "file": "icons/dead_tube_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dead_tube_coral",
+      "file": "icons/dead_tube_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:debug_stick",
+      "file": "icons/debug_stick.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:decorated_pot",
+      "file": "icons/decorated_pot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:desert_pyramid_map",
+      "file": "icons/desert_pyramid_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:desert_village_map",
+      "file": "icons/desert_village_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:detector_rail",
+      "file": "icons/detector_rail.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_axe",
+      "file": "icons/diamond_axe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_boots",
+      "file": "icons/diamond_boots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_chestplate",
+      "file": "icons/diamond_chestplate.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_helmet",
+      "file": "icons/diamond_helmet.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_hoe",
+      "file": "icons/diamond_hoe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_horse_armor",
+      "file": "icons/diamond_horse_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_leggings",
+      "file": "icons/diamond_leggings.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_nautilus_armor",
+      "file": "icons/diamond_nautilus_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_pickaxe",
+      "file": "icons/diamond_pickaxe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_shovel",
+      "file": "icons/diamond_shovel.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_spear",
+      "file": "icons/diamond_spear.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond_sword",
+      "file": "icons/diamond_sword.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:diamond",
+      "file": "icons/diamond.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:disc_fragment_5",
+      "file": "icons/disc_fragment_5.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dolphin_spawn_egg",
+      "file": "icons/dolphin_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:donkey_spawn_egg",
+      "file": "icons/donkey_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dragon_breath",
+      "file": "icons/dragon_breath.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dragon_head",
+      "file": "icons/dragon_head.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dried_kelp",
+      "file": "icons/dried_kelp.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:drowned_spawn_egg",
+      "file": "icons/drowned_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:dune_armor_trim_smithing_template",
+      "file": "icons/dune_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:echo_shard",
+      "file": "icons/echo_shard.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:egg",
+      "file": "icons/egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:elder_guardian_spawn_egg",
+      "file": "icons/elder_guardian_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:elytra",
+      "file": "icons/elytra.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:emerald",
+      "file": "icons/emerald.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:enchanted_book",
+      "file": "icons/enchanted_book.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:enchanted_golden_apple",
+      "file": "icons/enchanted_golden_apple.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:end_crystal",
+      "file": "icons/end_crystal.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ender_chest",
+      "file": "icons/ender_chest.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ender_dragon_spawn_egg",
+      "file": "icons/ender_dragon_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ender_eye",
+      "file": "icons/ender_eye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ender_pearl",
+      "file": "icons/ender_pearl.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:enderman_spawn_egg",
+      "file": "icons/enderman_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:endermite_spawn_egg",
+      "file": "icons/endermite_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:evoker_spawn_egg",
+      "file": "icons/evoker_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:experience_bottle",
+      "file": "icons/experience_bottle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:explorer_pottery_sherd",
+      "file": "icons/explorer_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:exposed_copper_bars",
+      "file": "icons/exposed_copper_bars.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:exposed_copper_chain",
+      "file": "icons/exposed_copper_chain.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:exposed_copper_chest",
+      "file": "icons/exposed_copper_chest.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:exposed_copper_door",
+      "file": "icons/exposed_copper_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:exposed_copper_lantern",
+      "file": "icons/exposed_copper_lantern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:eye_armor_trim_smithing_template",
+      "file": "icons/eye_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:feather",
+      "file": "icons/feather.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:fermented_spider_eye",
+      "file": "icons/fermented_spider_eye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:fern",
+      "file": "icons/fern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:field_masoned_banner_pattern",
+      "file": "icons/field_masoned_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:filled_map",
+      "file": "icons/filled_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:fire_charge",
+      "file": "icons/fire_charge.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:fire_coral_fan",
+      "file": "icons/fire_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:fire_coral",
+      "file": "icons/fire_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:firefly_bush",
+      "file": "icons/firefly_bush.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:firework_rocket",
+      "file": "icons/firework_rocket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:firework_star",
+      "file": "icons/firework_star.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:fishing_rod",
+      "file": "icons/fishing_rod.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:flint_and_steel",
+      "file": "icons/flint_and_steel.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:flint",
+      "file": "icons/flint.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:flow_armor_trim_smithing_template",
+      "file": "icons/flow_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:flow_banner_pattern",
+      "file": "icons/flow_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:flow_pottery_sherd",
+      "file": "icons/flow_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:flower_banner_pattern",
+      "file": "icons/flower_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:flower_pot",
+      "file": "icons/flower_pot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:fox_spawn_egg",
+      "file": "icons/fox_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:friend_pottery_sherd",
+      "file": "icons/friend_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:frog_spawn_egg",
+      "file": "icons/frog_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:frogspawn",
+      "file": "icons/frogspawn.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:furnace_minecart",
+      "file": "icons/furnace_minecart.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ghast_spawn_egg",
+      "file": "icons/ghast_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ghast_tear",
+      "file": "icons/ghast_tear.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:glass_bottle",
+      "file": "icons/glass_bottle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:glass_pane",
+      "file": "icons/glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:glistering_melon_slice",
+      "file": "icons/glistering_melon_slice.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:globe_banner_pattern",
+      "file": "icons/globe_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:glow_berries",
+      "file": "icons/glow_berries.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:glow_ink_sac",
+      "file": "icons/glow_ink_sac.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:glow_item_frame",
+      "file": "icons/glow_item_frame.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:glow_lichen",
+      "file": "icons/glow_lichen.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:glow_squid_spawn_egg",
+      "file": "icons/glow_squid_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:glowstone_dust",
+      "file": "icons/glowstone_dust.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:goat_horn",
+      "file": "icons/goat_horn.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:goat_spawn_egg",
+      "file": "icons/goat_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gold_ingot",
+      "file": "icons/gold_ingot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gold_nugget",
+      "file": "icons/gold_nugget.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_apple",
+      "file": "icons/golden_apple.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_axe",
+      "file": "icons/golden_axe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_boots",
+      "file": "icons/golden_boots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_carrot",
+      "file": "icons/golden_carrot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_chestplate",
+      "file": "icons/golden_chestplate.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_dandelion",
+      "file": "icons/golden_dandelion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_helmet",
+      "file": "icons/golden_helmet.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_hoe",
+      "file": "icons/golden_hoe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_horse_armor",
+      "file": "icons/golden_horse_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_leggings",
+      "file": "icons/golden_leggings.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_nautilus_armor",
+      "file": "icons/golden_nautilus_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_pickaxe",
+      "file": "icons/golden_pickaxe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_shovel",
+      "file": "icons/golden_shovel.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_spear",
+      "file": "icons/golden_spear.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:golden_sword",
+      "file": "icons/golden_sword.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gray_banner",
+      "file": "icons/gray_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:gray_bed",
+      "file": "icons/gray_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:gray_bundle",
+      "file": "icons/gray_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gray_candle",
+      "file": "icons/gray_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gray_cushion",
+      "file": "icons/gray_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gray_dye",
+      "file": "icons/gray_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gray_harness",
+      "file": "icons/gray_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gray_shulker_box",
+      "file": "icons/gray_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gray_stained_glass_pane",
+      "file": "icons/gray_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:green_banner",
+      "file": "icons/green_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:green_bed",
+      "file": "icons/green_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:green_bundle",
+      "file": "icons/green_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:green_candle",
+      "file": "icons/green_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:green_cushion",
+      "file": "icons/green_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:green_dye",
+      "file": "icons/green_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:green_harness",
+      "file": "icons/green_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:green_shulker_box",
+      "file": "icons/green_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:green_stained_glass_pane",
+      "file": "icons/green_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:guardian_spawn_egg",
+      "file": "icons/guardian_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:gunpowder",
+      "file": "icons/gunpowder.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:guster_banner_pattern",
+      "file": "icons/guster_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:guster_pottery_sherd",
+      "file": "icons/guster_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:hanging_roots",
+      "file": "icons/hanging_roots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:happy_ghast_spawn_egg",
+      "file": "icons/happy_ghast_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:heart_of_the_sea",
+      "file": "icons/heart_of_the_sea.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:heart_pottery_sherd",
+      "file": "icons/heart_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:heartbreak_pottery_sherd",
+      "file": "icons/heartbreak_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:hoglin_spawn_egg",
+      "file": "icons/hoglin_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:honey_bottle",
+      "file": "icons/honey_bottle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:honeycomb",
+      "file": "icons/honeycomb.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:hopper_minecart",
+      "file": "icons/hopper_minecart.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:hopper",
+      "file": "icons/hopper.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:horn_coral_fan",
+      "file": "icons/horn_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:horn_coral",
+      "file": "icons/horn_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:horse_spawn_egg",
+      "file": "icons/horse_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:host_armor_trim_smithing_template",
+      "file": "icons/host_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:howl_pottery_sherd",
+      "file": "icons/howl_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:husk_spawn_egg",
+      "file": "icons/husk_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ink_sac",
+      "file": "icons/ink_sac.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_axe",
+      "file": "icons/iron_axe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_bars",
+      "file": "icons/iron_bars.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_boots",
+      "file": "icons/iron_boots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_chain",
+      "file": "icons/iron_chain.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_chestplate",
+      "file": "icons/iron_chestplate.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_door",
+      "file": "icons/iron_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_golem_spawn_egg",
+      "file": "icons/iron_golem_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_helmet",
+      "file": "icons/iron_helmet.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_hoe",
+      "file": "icons/iron_hoe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_horse_armor",
+      "file": "icons/iron_horse_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_ingot",
+      "file": "icons/iron_ingot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_leggings",
+      "file": "icons/iron_leggings.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_nautilus_armor",
+      "file": "icons/iron_nautilus_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_nugget",
+      "file": "icons/iron_nugget.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_pickaxe",
+      "file": "icons/iron_pickaxe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_shovel",
+      "file": "icons/iron_shovel.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_spear",
+      "file": "icons/iron_spear.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:iron_sword",
+      "file": "icons/iron_sword.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:item_frame",
+      "file": "icons/item_frame.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:jungle_boat",
+      "file": "icons/jungle_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:jungle_chest_boat",
+      "file": "icons/jungle_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:jungle_door",
+      "file": "icons/jungle_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:jungle_hanging_sign",
+      "file": "icons/jungle_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:jungle_pyramid_map",
+      "file": "icons/jungle_pyramid_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:jungle_sapling",
+      "file": "icons/jungle_sapling.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:jungle_sign",
+      "file": "icons/jungle_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:kelp",
+      "file": "icons/kelp.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:knowledge_book",
+      "file": "icons/knowledge_book.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ladder",
+      "file": "icons/ladder.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lantern",
+      "file": "icons/lantern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lapis_lazuli",
+      "file": "icons/lapis_lazuli.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:large_amethyst_bud",
+      "file": "icons/large_amethyst_bud.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:large_fern",
+      "file": "icons/large_fern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lava_bucket",
+      "file": "icons/lava_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lead",
+      "file": "icons/lead.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:leaf_litter",
+      "file": "icons/leaf_litter.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:leather_boots",
+      "file": "icons/leather_boots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:leather_chestplate",
+      "file": "icons/leather_chestplate.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:leather_helmet",
+      "file": "icons/leather_helmet.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:leather_horse_armor",
+      "file": "icons/leather_horse_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:leather_leggings",
+      "file": "icons/leather_leggings.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:leather",
+      "file": "icons/leather.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lever",
+      "file": "icons/lever.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_blue_banner",
+      "file": "icons/light_blue_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:light_blue_bed",
+      "file": "icons/light_blue_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:light_blue_bundle",
+      "file": "icons/light_blue_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_blue_candle",
+      "file": "icons/light_blue_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_blue_cushion",
+      "file": "icons/light_blue_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_blue_dye",
+      "file": "icons/light_blue_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_blue_harness",
+      "file": "icons/light_blue_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_blue_shulker_box",
+      "file": "icons/light_blue_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_blue_stained_glass_pane",
+      "file": "icons/light_blue_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_gray_banner",
+      "file": "icons/light_gray_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:light_gray_bed",
+      "file": "icons/light_gray_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:light_gray_bundle",
+      "file": "icons/light_gray_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_gray_candle",
+      "file": "icons/light_gray_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_gray_cushion",
+      "file": "icons/light_gray_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_gray_dye",
+      "file": "icons/light_gray_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_gray_harness",
+      "file": "icons/light_gray_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_gray_shulker_box",
+      "file": "icons/light_gray_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:light_gray_stained_glass_pane",
+      "file": "icons/light_gray_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lilac",
+      "file": "icons/lilac.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lily_of_the_valley",
+      "file": "icons/lily_of_the_valley.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lily_pad",
+      "file": "icons/lily_pad.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lime_banner",
+      "file": "icons/lime_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:lime_bed",
+      "file": "icons/lime_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:lime_bundle",
+      "file": "icons/lime_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lime_candle",
+      "file": "icons/lime_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lime_cushion",
+      "file": "icons/lime_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lime_dye",
+      "file": "icons/lime_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lime_harness",
+      "file": "icons/lime_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lime_shulker_box",
+      "file": "icons/lime_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lime_stained_glass_pane",
+      "file": "icons/lime_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:lingering_potion",
+      "file": "icons/lingering_potion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:llama_spawn_egg",
+      "file": "icons/llama_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mace",
+      "file": "icons/mace.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:magenta_banner",
+      "file": "icons/magenta_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:magenta_bed",
+      "file": "icons/magenta_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:magenta_bundle",
+      "file": "icons/magenta_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:magenta_candle",
+      "file": "icons/magenta_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:magenta_cushion",
+      "file": "icons/magenta_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:magenta_dye",
+      "file": "icons/magenta_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:magenta_harness",
+      "file": "icons/magenta_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:magenta_shulker_box",
+      "file": "icons/magenta_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:magenta_stained_glass_pane",
+      "file": "icons/magenta_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:magma_cream",
+      "file": "icons/magma_cream.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:magma_cube_spawn_egg",
+      "file": "icons/magma_cube_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mangrove_boat",
+      "file": "icons/mangrove_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mangrove_chest_boat",
+      "file": "icons/mangrove_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mangrove_door",
+      "file": "icons/mangrove_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mangrove_hanging_sign",
+      "file": "icons/mangrove_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mangrove_propagule",
+      "file": "icons/mangrove_propagule.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mangrove_sign",
+      "file": "icons/mangrove_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:map",
+      "file": "icons/map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:medium_amethyst_bud",
+      "file": "icons/medium_amethyst_bud.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:melon_seeds",
+      "file": "icons/melon_seeds.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:melon_slice",
+      "file": "icons/melon_slice.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:milk_bucket",
+      "file": "icons/milk_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:minecart",
+      "file": "icons/minecart.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:miner_pottery_sherd",
+      "file": "icons/miner_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mojang_banner_pattern",
+      "file": "icons/mojang_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mooshroom_spawn_egg",
+      "file": "icons/mooshroom_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mourner_pottery_sherd",
+      "file": "icons/mourner_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mule_spawn_egg",
+      "file": "icons/mule_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mushroom_stew",
+      "file": "icons/mushroom_stew.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_11",
+      "file": "icons/music_disc_11.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_13",
+      "file": "icons/music_disc_13.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_5",
+      "file": "icons/music_disc_5.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_blocks",
+      "file": "icons/music_disc_blocks.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_bounce",
+      "file": "icons/music_disc_bounce.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_cat",
+      "file": "icons/music_disc_cat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_chirp",
+      "file": "icons/music_disc_chirp.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_creator_music_box",
+      "file": "icons/music_disc_creator_music_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_creator",
+      "file": "icons/music_disc_creator.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_far",
+      "file": "icons/music_disc_far.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_lava_chicken",
+      "file": "icons/music_disc_lava_chicken.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_mall",
+      "file": "icons/music_disc_mall.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_mellohi",
+      "file": "icons/music_disc_mellohi.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_otherside",
+      "file": "icons/music_disc_otherside.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_pigstep",
+      "file": "icons/music_disc_pigstep.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_precipice",
+      "file": "icons/music_disc_precipice.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_relic",
+      "file": "icons/music_disc_relic.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_stal",
+      "file": "icons/music_disc_stal.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_strad",
+      "file": "icons/music_disc_strad.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_tears",
+      "file": "icons/music_disc_tears.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_wait",
+      "file": "icons/music_disc_wait.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:music_disc_ward",
+      "file": "icons/music_disc_ward.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:mutton",
+      "file": "icons/mutton.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:name_tag",
+      "file": "icons/name_tag.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:nautilus_shell",
+      "file": "icons/nautilus_shell.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:nautilus_spawn_egg",
+      "file": "icons/nautilus_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:nether_brick",
+      "file": "icons/nether_brick.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:nether_sprouts",
+      "file": "icons/nether_sprouts.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:nether_star",
+      "file": "icons/nether_star.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:nether_wart",
+      "file": "icons/nether_wart.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_axe",
+      "file": "icons/netherite_axe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_boots",
+      "file": "icons/netherite_boots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_chestplate",
+      "file": "icons/netherite_chestplate.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_helmet",
+      "file": "icons/netherite_helmet.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_hoe",
+      "file": "icons/netherite_hoe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_horse_armor",
+      "file": "icons/netherite_horse_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_ingot",
+      "file": "icons/netherite_ingot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_leggings",
+      "file": "icons/netherite_leggings.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_nautilus_armor",
+      "file": "icons/netherite_nautilus_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_pickaxe",
+      "file": "icons/netherite_pickaxe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_scrap",
+      "file": "icons/netherite_scrap.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_shovel",
+      "file": "icons/netherite_shovel.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_spear",
+      "file": "icons/netherite_spear.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_sword",
+      "file": "icons/netherite_sword.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:netherite_upgrade_smithing_template",
+      "file": "icons/netherite_upgrade_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oak_boat",
+      "file": "icons/oak_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oak_chest_boat",
+      "file": "icons/oak_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oak_door",
+      "file": "icons/oak_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oak_hanging_sign",
+      "file": "icons/oak_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oak_sapling",
+      "file": "icons/oak_sapling.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oak_sign",
+      "file": "icons/oak_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ocean_monument_map",
+      "file": "icons/ocean_monument_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ocelot_spawn_egg",
+      "file": "icons/ocelot_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ominous_bottle",
+      "file": "icons/ominous_bottle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ominous_trial_key",
+      "file": "icons/ominous_trial_key.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:open_eyeblossom",
+      "file": "icons/open_eyeblossom.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:orange_banner",
+      "file": "icons/orange_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:orange_bed",
+      "file": "icons/orange_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:orange_bundle",
+      "file": "icons/orange_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:orange_candle",
+      "file": "icons/orange_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:orange_cushion",
+      "file": "icons/orange_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:orange_dye",
+      "file": "icons/orange_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:orange_harness",
+      "file": "icons/orange_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:orange_shulker_box",
+      "file": "icons/orange_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:orange_stained_glass_pane",
+      "file": "icons/orange_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:orange_tulip",
+      "file": "icons/orange_tulip.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oxeye_daisy",
+      "file": "icons/oxeye_daisy.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oxidized_copper_bars",
+      "file": "icons/oxidized_copper_bars.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oxidized_copper_chain",
+      "file": "icons/oxidized_copper_chain.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oxidized_copper_chest",
+      "file": "icons/oxidized_copper_chest.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oxidized_copper_door",
+      "file": "icons/oxidized_copper_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:oxidized_copper_lantern",
+      "file": "icons/oxidized_copper_lantern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:painting",
+      "file": "icons/painting.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pale_hanging_moss",
+      "file": "icons/pale_hanging_moss.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pale_oak_boat",
+      "file": "icons/pale_oak_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pale_oak_chest_boat",
+      "file": "icons/pale_oak_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pale_oak_door",
+      "file": "icons/pale_oak_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pale_oak_hanging_sign",
+      "file": "icons/pale_oak_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pale_oak_sapling",
+      "file": "icons/pale_oak_sapling.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pale_oak_sign",
+      "file": "icons/pale_oak_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:panda_spawn_egg",
+      "file": "icons/panda_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:paper",
+      "file": "icons/paper.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:parched_spawn_egg",
+      "file": "icons/parched_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:parrot_spawn_egg",
+      "file": "icons/parrot_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:peony",
+      "file": "icons/peony.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:phantom_membrane",
+      "file": "icons/phantom_membrane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:phantom_spawn_egg",
+      "file": "icons/phantom_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pig_spawn_egg",
+      "file": "icons/pig_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:piglin_banner_pattern",
+      "file": "icons/piglin_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:piglin_brute_spawn_egg",
+      "file": "icons/piglin_brute_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:piglin_spawn_egg",
+      "file": "icons/piglin_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pillager_spawn_egg",
+      "file": "icons/pillager_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pink_banner",
+      "file": "icons/pink_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:pink_bed",
+      "file": "icons/pink_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:pink_bundle",
+      "file": "icons/pink_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pink_candle",
+      "file": "icons/pink_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pink_cushion",
+      "file": "icons/pink_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pink_dye",
+      "file": "icons/pink_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pink_harness",
+      "file": "icons/pink_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pink_petals",
+      "file": "icons/pink_petals.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pink_shulker_box",
+      "file": "icons/pink_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pink_stained_glass_pane",
+      "file": "icons/pink_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pink_tulip",
+      "file": "icons/pink_tulip.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pitcher_plant",
+      "file": "icons/pitcher_plant.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pitcher_pod",
+      "file": "icons/pitcher_pod.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:plains_village_map",
+      "file": "icons/plains_village_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:plenty_pottery_sherd",
+      "file": "icons/plenty_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pointed_dripstone",
+      "file": "icons/pointed_dripstone.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:poisonous_potato",
+      "file": "icons/poisonous_potato.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:polar_bear_spawn_egg",
+      "file": "icons/polar_bear_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:poplar_boat",
+      "file": "icons/poplar_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:poplar_chest_boat",
+      "file": "icons/poplar_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:poplar_door",
+      "file": "icons/poplar_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:poplar_hanging_sign",
+      "file": "icons/poplar_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:poplar_sapling",
+      "file": "icons/poplar_sapling.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:poplar_sign",
+      "file": "icons/poplar_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:popped_chorus_fruit",
+      "file": "icons/popped_chorus_fruit.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:poppy",
+      "file": "icons/poppy.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:porkchop",
+      "file": "icons/porkchop.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:potato",
+      "file": "icons/potato.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:potion",
+      "file": "icons/potion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:powder_snow_bucket",
+      "file": "icons/powder_snow_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:powered_rail",
+      "file": "icons/powered_rail.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:prismarine_crystals",
+      "file": "icons/prismarine_crystals.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:prismarine_shard",
+      "file": "icons/prismarine_shard.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:prize_pottery_sherd",
+      "file": "icons/prize_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pufferfish_bucket",
+      "file": "icons/pufferfish_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pufferfish_spawn_egg",
+      "file": "icons/pufferfish_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pufferfish",
+      "file": "icons/pufferfish.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pumpkin_pie",
+      "file": "icons/pumpkin_pie.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:pumpkin_seeds",
+      "file": "icons/pumpkin_seeds.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:purple_banner",
+      "file": "icons/purple_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:purple_bed",
+      "file": "icons/purple_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:purple_bundle",
+      "file": "icons/purple_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:purple_candle",
+      "file": "icons/purple_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:purple_cushion",
+      "file": "icons/purple_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:purple_dye",
+      "file": "icons/purple_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:purple_harness",
+      "file": "icons/purple_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:purple_shulker_box",
+      "file": "icons/purple_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:purple_stained_glass_pane",
+      "file": "icons/purple_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:quartz",
+      "file": "icons/quartz.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:rabbit_foot",
+      "file": "icons/rabbit_foot.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:rabbit_hide",
+      "file": "icons/rabbit_hide.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:rabbit_spawn_egg",
+      "file": "icons/rabbit_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:rabbit_stew",
+      "file": "icons/rabbit_stew.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:rabbit",
+      "file": "icons/rabbit.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:rail",
+      "file": "icons/rail.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:raiser_armor_trim_smithing_template",
+      "file": "icons/raiser_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ravager_spawn_egg",
+      "file": "icons/ravager_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:raw_copper",
+      "file": "icons/raw_copper.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:raw_gold",
+      "file": "icons/raw_gold.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:raw_iron",
+      "file": "icons/raw_iron.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_banner",
+      "file": "icons/red_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:red_bed",
+      "file": "icons/red_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:red_bundle",
+      "file": "icons/red_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_candle",
+      "file": "icons/red_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_cushion",
+      "file": "icons/red_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_dye",
+      "file": "icons/red_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_harness",
+      "file": "icons/red_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_mushroom",
+      "file": "icons/red_mushroom.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_shrub",
+      "file": "icons/red_shrub.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_shulker_box",
+      "file": "icons/red_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_stained_glass_pane",
+      "file": "icons/red_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:red_tulip",
+      "file": "icons/red_tulip.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:redstone_torch",
+      "file": "icons/redstone_torch.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:redstone",
+      "file": "icons/redstone.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:repeater",
+      "file": "icons/repeater.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:resin_brick",
+      "file": "icons/resin_brick.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:resin_clump",
+      "file": "icons/resin_clump.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:rib_armor_trim_smithing_template",
+      "file": "icons/rib_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:rose_bush",
+      "file": "icons/rose_bush.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:rotten_flesh",
+      "file": "icons/rotten_flesh.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:saddle",
+      "file": "icons/saddle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:salmon_bucket",
+      "file": "icons/salmon_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:salmon_spawn_egg",
+      "file": "icons/salmon_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:salmon",
+      "file": "icons/salmon.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:savanna_village_map",
+      "file": "icons/savanna_village_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:scrape_pottery_sherd",
+      "file": "icons/scrape_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sculk_vein",
+      "file": "icons/sculk_vein.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sea_pickle",
+      "file": "icons/sea_pickle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:seagrass",
+      "file": "icons/seagrass.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sentry_armor_trim_smithing_template",
+      "file": "icons/sentry_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:shaper_armor_trim_smithing_template",
+      "file": "icons/shaper_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sheaf_pottery_sherd",
+      "file": "icons/sheaf_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:shears",
+      "file": "icons/shears.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sheep_spawn_egg",
+      "file": "icons/sheep_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:shelter_pottery_sherd",
+      "file": "icons/shelter_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:shield",
+      "file": "icons/shield.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:short_dry_grass",
+      "file": "icons/short_dry_grass.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:short_grass",
+      "file": "icons/short_grass.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:shulker_box",
+      "file": "icons/shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:shulker_shell",
+      "file": "icons/shulker_shell.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:shulker_spawn_egg",
+      "file": "icons/shulker_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:silence_armor_trim_smithing_template",
+      "file": "icons/silence_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:silverfish_spawn_egg",
+      "file": "icons/silverfish_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:skeleton_horse_spawn_egg",
+      "file": "icons/skeleton_horse_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:skeleton_spawn_egg",
+      "file": "icons/skeleton_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:skull_banner_pattern",
+      "file": "icons/skull_banner_pattern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:skull_pottery_sherd",
+      "file": "icons/skull_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:slime_ball",
+      "file": "icons/slime_ball.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:slime_spawn_egg",
+      "file": "icons/slime_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:small_amethyst_bud",
+      "file": "icons/small_amethyst_bud.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sniffer_egg",
+      "file": "icons/sniffer_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sniffer_spawn_egg",
+      "file": "icons/sniffer_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:snort_pottery_sherd",
+      "file": "icons/snort_pottery_sherd.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:snout_armor_trim_smithing_template",
+      "file": "icons/snout_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:snow_golem_spawn_egg",
+      "file": "icons/snow_golem_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:snowball",
+      "file": "icons/snowball.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:snowy_village_map",
+      "file": "icons/snowy_village_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:soul_campfire",
+      "file": "icons/soul_campfire.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:soul_lantern",
+      "file": "icons/soul_lantern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:soul_torch",
+      "file": "icons/soul_torch.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spectral_arrow",
+      "file": "icons/spectral_arrow.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spider_eye",
+      "file": "icons/spider_eye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spider_spawn_egg",
+      "file": "icons/spider_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spire_armor_trim_smithing_template",
+      "file": "icons/spire_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:splash_potion",
+      "file": "icons/splash_potion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spruce_boat",
+      "file": "icons/spruce_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spruce_chest_boat",
+      "file": "icons/spruce_chest_boat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spruce_door",
+      "file": "icons/spruce_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spruce_hanging_sign",
+      "file": "icons/spruce_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spruce_sapling",
+      "file": "icons/spruce_sapling.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spruce_sign",
+      "file": "icons/spruce_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:spyglass",
+      "file": "icons/spyglass.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:squid_spawn_egg",
+      "file": "icons/squid_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:stick",
+      "file": "icons/stick.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:stone_axe",
+      "file": "icons/stone_axe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:stone_hoe",
+      "file": "icons/stone_hoe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:stone_pickaxe",
+      "file": "icons/stone_pickaxe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:stone_shovel",
+      "file": "icons/stone_shovel.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:stone_spear",
+      "file": "icons/stone_spear.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:stone_sword",
+      "file": "icons/stone_sword.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:straw_bed",
+      "file": "icons/straw_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:stray_spawn_egg",
+      "file": "icons/stray_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:strider_spawn_egg",
+      "file": "icons/strider_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:string",
+      "file": "icons/string.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:structure_void",
+      "file": "icons/structure_void.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sugar_cane",
+      "file": "icons/sugar_cane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sugar",
+      "file": "icons/sugar.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sulfur_cube_bucket",
+      "file": "icons/sulfur_cube_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sulfur_cube_spawn_egg",
+      "file": "icons/sulfur_cube_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sulfur_spike",
+      "file": "icons/sulfur_spike.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sunflower",
+      "file": "icons/sunflower.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:suspicious_stew",
+      "file": "icons/suspicious_stew.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:swamp_hut_map",
+      "file": "icons/swamp_hut_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:sweet_berries",
+      "file": "icons/sweet_berries.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tadpole_bucket",
+      "file": "icons/tadpole_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tadpole_spawn_egg",
+      "file": "icons/tadpole_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:taiga_village_map",
+      "file": "icons/taiga_village_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tall_dry_grass",
+      "file": "icons/tall_dry_grass.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tall_grass",
+      "file": "icons/tall_grass.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tide_armor_trim_smithing_template",
+      "file": "icons/tide_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tipped_arrow",
+      "file": "icons/tipped_arrow.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tnt_minecart",
+      "file": "icons/tnt_minecart.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:torch",
+      "file": "icons/torch.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:torchflower_seeds",
+      "file": "icons/torchflower_seeds.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:torchflower",
+      "file": "icons/torchflower.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:totem_of_undying",
+      "file": "icons/totem_of_undying.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:trader_llama_spawn_egg",
+      "file": "icons/trader_llama_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:trapped_chest",
+      "file": "icons/trapped_chest.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:trial_key",
+      "file": "icons/trial_key.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:trident",
+      "file": "icons/trident.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tripwire_hook",
+      "file": "icons/tripwire_hook.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tropical_fish_bucket",
+      "file": "icons/tropical_fish_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tropical_fish_spawn_egg",
+      "file": "icons/tropical_fish_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tropical_fish",
+      "file": "icons/tropical_fish.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tube_coral_fan",
+      "file": "icons/tube_coral_fan.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:tube_coral",
+      "file": "icons/tube_coral.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:turtle_egg",
+      "file": "icons/turtle_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:turtle_helmet",
+      "file": "icons/turtle_helmet.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:turtle_scute",
+      "file": "icons/turtle_scute.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:turtle_spawn_egg",
+      "file": "icons/turtle_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:twisting_vines",
+      "file": "icons/twisting_vines.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:vex_armor_trim_smithing_template",
+      "file": "icons/vex_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:vex_spawn_egg",
+      "file": "icons/vex_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:villager_spawn_egg",
+      "file": "icons/villager_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:vindicator_spawn_egg",
+      "file": "icons/vindicator_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:vine",
+      "file": "icons/vine.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wandering_trader_spawn_egg",
+      "file": "icons/wandering_trader_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:ward_armor_trim_smithing_template",
+      "file": "icons/ward_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:warden_spawn_egg",
+      "file": "icons/warden_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:warm_ocean_ruins_map",
+      "file": "icons/warm_ocean_ruins_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:warped_door",
+      "file": "icons/warped_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:warped_fungus_on_a_stick",
+      "file": "icons/warped_fungus_on_a_stick.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:warped_fungus",
+      "file": "icons/warped_fungus.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:warped_hanging_sign",
+      "file": "icons/warped_hanging_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:warped_roots",
+      "file": "icons/warped_roots.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:warped_sign",
+      "file": "icons/warped_sign.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:water_bucket",
+      "file": "icons/water_bucket.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wayfinder_armor_trim_smithing_template",
+      "file": "icons/wayfinder_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:weathered_copper_bars",
+      "file": "icons/weathered_copper_bars.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:weathered_copper_chain",
+      "file": "icons/weathered_copper_chain.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:weathered_copper_chest",
+      "file": "icons/weathered_copper_chest.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:weathered_copper_door",
+      "file": "icons/weathered_copper_door.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:weathered_copper_lantern",
+      "file": "icons/weathered_copper_lantern.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:weeping_vines",
+      "file": "icons/weeping_vines.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wheat_seeds",
+      "file": "icons/wheat_seeds.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wheat",
+      "file": "icons/wheat.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:white_banner",
+      "file": "icons/white_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:white_bed",
+      "file": "icons/white_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:white_bundle",
+      "file": "icons/white_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:white_candle",
+      "file": "icons/white_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:white_cushion",
+      "file": "icons/white_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:white_dye",
+      "file": "icons/white_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:white_harness",
+      "file": "icons/white_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:white_shulker_box",
+      "file": "icons/white_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:white_stained_glass_pane",
+      "file": "icons/white_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:white_tulip",
+      "file": "icons/white_tulip.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wild_armor_trim_smithing_template",
+      "file": "icons/wild_armor_trim_smithing_template.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wildflowers",
+      "file": "icons/wildflowers.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wind_charge",
+      "file": "icons/wind_charge.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:witch_spawn_egg",
+      "file": "icons/witch_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wither_rose",
+      "file": "icons/wither_rose.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wither_skeleton_spawn_egg",
+      "file": "icons/wither_skeleton_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wither_spawn_egg",
+      "file": "icons/wither_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wolf_armor",
+      "file": "icons/wolf_armor.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wolf_spawn_egg",
+      "file": "icons/wolf_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wooden_axe",
+      "file": "icons/wooden_axe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wooden_hoe",
+      "file": "icons/wooden_hoe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wooden_pickaxe",
+      "file": "icons/wooden_pickaxe.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wooden_shovel",
+      "file": "icons/wooden_shovel.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wooden_spear",
+      "file": "icons/wooden_spear.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:wooden_sword",
+      "file": "icons/wooden_sword.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:woodland_mansion_map",
+      "file": "icons/woodland_mansion_map.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:writable_book",
+      "file": "icons/writable_book.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:written_book",
+      "file": "icons/written_book.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:yellow_banner",
+      "file": "icons/yellow_banner.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:yellow_bed",
+      "file": "icons/yellow_bed.png",
+      "width": 256,
+      "height": 256,
+      "source": "special_item"
+    },
+    {
+      "id": "minecraft:yellow_bundle",
+      "file": "icons/yellow_bundle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:yellow_candle",
+      "file": "icons/yellow_candle.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:yellow_cushion",
+      "file": "icons/yellow_cushion.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:yellow_dye",
+      "file": "icons/yellow_dye.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:yellow_harness",
+      "file": "icons/yellow_harness.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:yellow_shulker_box",
+      "file": "icons/yellow_shulker_box.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:yellow_stained_glass_pane",
+      "file": "icons/yellow_stained_glass_pane.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:zoglin_spawn_egg",
+      "file": "icons/zoglin_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:zombie_horse_spawn_egg",
+      "file": "icons/zombie_horse_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:zombie_nautilus_spawn_egg",
+      "file": "icons/zombie_nautilus_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:zombie_spawn_egg",
+      "file": "icons/zombie_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:zombie_villager_spawn_egg",
+      "file": "icons/zombie_villager_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    },
+    {
+      "id": "minecraft:zombified_piglin_spawn_egg",
+      "file": "icons/zombified_piglin_spawn_egg.png",
+      "width": 256,
+      "height": 256,
+      "source": "item_model"
+    }
+  ]
+}
