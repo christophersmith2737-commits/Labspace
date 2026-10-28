@@ -1,0 +1,6 @@
+export type Workspace = { id: string; name: string; lowStockThreshold: number; createdAt: string; updatedAt: string };
+export type Room = { id: string; workspaceId: string; name: string; icon: string; color: string; description: string; createdAt: string; updatedAt: string };
+export type ContainerNode = { id: string; roomId: string; parentId: string | null; name: string; type: string; icon: string; color: string; description: string; sortOrder: number; createdAt: string; updatedAt: string };
+export type Item = { id: string; roomId: string; containerId: string | null; name: string; icon: string; iconColor: string; category: string; stockEnabled: boolean; stockMode: string; stockPercent: number; initialQuantity: number | null; currentQuantity: number | null; unit: string; brand: string; specification: string; casNumber: string; expiryDate: string | null; notes: string; createdAt: string; updatedAt: string };
+export type ActivityLog = { id: string; action: string; entityType: string; entityId: string; entityName: string; message: string; createdAt: string };
+export type AppState = { workspace: Workspace; rooms: Room[]; containers: ContainerNode[]; items: Item[]; logs: ActivityLog[] };
