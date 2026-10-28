@@ -536,7 +536,7 @@ export async function POST(request: Request) {
     } else if (action === "importMedicineCatalog") {
       const [existingRoomRows, existingContainerRows, existingItemRows] =
         await Promise.all([
-          db.select({ id: rooms.id }).from(rooms),
+          db.select({ id: rooms.id, name: rooms.name }).from(rooms),
           db.select({ id: containers.id }).from(containers),
           db.select({ id: items.id }).from(items),
         ]);
@@ -545,8 +545,21 @@ export async function POST(request: Request) {
         existingContainerRows.map((row) => row.id),
       );
       const existingItemIds = new Set(existingItemRows.map((row) => row.id));
+      const targetRoomIds = new Map(
+        medicineCatalog.rooms.map((room) => {
+          const laboratoryName = room.name.replace("药品柜", "");
+          const target =
+            existingRoomRows.find((row) => row.name === laboratoryName) ??
+            existingRoomRows.find((row) => row.id === room.id);
+          return [room.id, target?.id ?? room.id] as const;
+        }),
+      );
       const missingRooms = medicineCatalog.rooms
-        .filter((room) => !existingRoomIds.has(room.id))
+        .filter(
+          (room) =>
+            targetRoomIds.get(room.id) === room.id &&
+            !existingRoomIds.has(room.id),
+        )
         .map((room) => ({
           id: room.id,
           workspaceId: WORKSPACE_ID,
@@ -559,7 +572,7 @@ export async function POST(request: Request) {
         .filter((container) => !existingContainerIds.has(container.id))
         .map((container) => ({
           id: container.id,
-          roomId: container.roomId,
+          roomId: targetRoomIds.get(container.roomId) ?? container.roomId,
           parentId: null,
           name: container.name,
           type: "shelf",
@@ -572,7 +585,7 @@ export async function POST(request: Request) {
         .filter((item) => !existingItemIds.has(item.id))
         .map((item) => ({
           id: item.id,
-          roomId: item.roomId,
+          roomId: targetRoomIds.get(item.roomId) ?? item.roomId,
           containerId: item.containerId,
           name: item.name,
           icon: item.icon,
@@ -597,17 +610,42 @@ export async function POST(request: Request) {
       for (let start = 0; start < missingItems.length; start += 5) {
         await db.insert(items).values(missingItems.slice(start, start + 5));
       }
-      if (missingRooms.length || missingContainers.length || missingItems.length)
+      let consolidatedRooms = 0;
+      for (const sourceRoom of medicineCatalog.rooms) {
+        const targetRoomId = targetRoomIds.get(sourceRoom.id) ?? sourceRoom.id;
+        if (targetRoomId === sourceRoom.id) continue;
+        await db
+          .update(containers)
+          .set({ roomId: targetRoomId, updatedAt: now() })
+          .where(eq(containers.roomId, sourceRoom.id));
+        await db
+          .update(items)
+          .set({ roomId: targetRoomId, updatedAt: now() })
+          .where(eq(items.roomId, sourceRoom.id));
+        if (existingRoomIds.has(sourceRoom.id)) {
+          await db.delete(rooms).where(eq(rooms.id, sourceRoom.id));
+          consolidatedRooms += 1;
+        }
+      }
+      if (
+        missingRooms.length ||
+        missingContainers.length ||
+        missingItems.length ||
+        consolidatedRooms
+      )
         await log(db, {
           action,
           entityType: "catalog",
           entityId: "medicine-catalog-261021",
           entityName: medicineCatalog.source.title,
-          message: `导入药品清单：新增 ${missingItems.length} 条物品、${missingContainers.length} 个分区`,
+          message: consolidatedRooms
+            ? `药品清单已归入现有 105 / 103 房间（151 条、8 个分区）`
+            : `导入药品清单：新增 ${missingItems.length} 条物品、${missingContainers.length} 个分区`,
           after: {
             rooms: missingRooms.length,
             containers: missingContainers.length,
             items: missingItems.length,
+            consolidatedRooms,
           },
         });
     } else if (action === "updateSettings") {

@@ -478,6 +478,9 @@ export function LabSpaceApp() {
       ).length ?? 0,
     [data],
   );
+  const medicineCatalogNeedsSync =
+    data?.rooms.some((room) => room.id.startsWith("medicine-261021-room-")) ??
+    false;
 
   const containerPath = (containerId: string | null) => {
     const chain: ContainerNode[] = [];
@@ -675,15 +678,18 @@ export function LabSpaceApp() {
             data={data}
             lowItems={lowItems}
             medicineCatalogCount={medicineCatalogCount}
+            medicineCatalogNeedsSync={medicineCatalogNeedsSync}
             onRoom={navigateRoom}
             onAddRoom={() => setModal({ type: "room" })}
             onImportMedicineCatalog={() =>
               void mutate(
                 "importMedicineCatalog",
                 {},
-                medicineCatalogCount
-                  ? "药品清单缺失条目已补齐"
-                  : "药品清单已导入",
+                medicineCatalogNeedsSync
+                  ? "药品清单已归入 105 / 103"
+                  : medicineCatalogCount
+                    ? "药品清单缺失条目已补齐"
+                    : "药品清单已导入",
               )
             }
           />
@@ -854,6 +860,7 @@ function Dashboard({
   data,
   lowItems,
   medicineCatalogCount,
+  medicineCatalogNeedsSync,
   onRoom,
   onAddRoom,
   onImportMedicineCatalog,
@@ -861,6 +868,7 @@ function Dashboard({
   data: AppState;
   lowItems: Item[];
   medicineCatalogCount: number;
+  medicineCatalogNeedsSync: boolean;
   onRoom: (id: string) => void;
   onAddRoom: () => void;
   onImportMedicineCatalog: () => void;
@@ -909,14 +917,18 @@ function Dashboard({
           <button
             type="button"
             onClick={onImportMedicineCatalog}
-            disabled={medicineCatalogCount >= 151}
+            disabled={
+              medicineCatalogCount >= 151 && !medicineCatalogNeedsSync
+            }
             className="h-11 shrink-0 rounded-xl bg-emerald-600 px-4 text-sm font-semibold text-white disabled:cursor-default disabled:bg-emerald-600/55"
           >
-            {medicineCatalogCount >= 151
-              ? "清单已导入"
-              : medicineCatalogCount
-                ? "补齐缺失条目"
-                : "导入到 LabSpace"}
+            {medicineCatalogNeedsSync
+              ? "整理到 105 / 103"
+              : medicineCatalogCount >= 151
+                ? "清单已导入"
+                : medicineCatalogCount
+                  ? "补齐缺失条目"
+                  : "导入到 LabSpace"}
           </button>
         </div>
       </section>
