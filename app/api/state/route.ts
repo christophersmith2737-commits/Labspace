@@ -11,6 +11,16 @@ import {
 
 export const dynamic = "force-dynamic";
 const WORKSPACE_ID = "default-workspace";
+const MEDICINE_LEVEL_CONTAINER_IDS = [
+  "medicine-261021-container-01",
+  "medicine-261021-container-02",
+  "medicine-261021-container-03",
+  "medicine-261021-container-04",
+  "medicine-261021-container-05",
+  "medicine-261021-container-06",
+  "medicine-261021-container-07",
+  "medicine-261021-container-08",
+] as const;
 
 type RecordLike = Record<string, unknown>;
 const id = () => crypto.randomUUID();
@@ -292,10 +302,30 @@ export async function POST(request: Request) {
       const containerId = String(p.id);
       const targetRoomId = String(p.roomId);
       const targetParentId = p.parentId ? String(p.parentId) : null;
+      const [targetRoom] = await db
+        .select({ id: rooms.id })
+        .from(rooms)
+        .where(eq(rooms.id, targetRoomId))
+        .limit(1);
+      if (!targetRoom)
+        return Response.json({ error: "目标房间不存在" }, { status: 400 });
       const all = await db.select().from(containers);
       const current = all.find((c) => c.id === containerId);
       if (!current)
         return Response.json({ error: "容器不存在" }, { status: 404 });
+      if (targetParentId) {
+        const targetParent = all.find((c) => c.id === targetParentId);
+        if (!targetParent || targetParent.roomId !== targetRoomId)
+          return Response.json(
+            { error: "目标容器不在所选房间中" },
+            { status: 400 },
+          );
+        if (current.type === "level" && targetParent.type !== "cabinet")
+          return Response.json(
+            { error: "层级容器只能放进柜子容器" },
+            { status: 400 },
+          );
+      }
       const descendants = new Set<string>([containerId]);
       let changed = true;
       while (changed) {
@@ -533,6 +563,29 @@ export async function POST(request: Request) {
         before,
       });
       await db.delete(items).where(eq(items.id, itemId));
+    } else if (action === "markMedicineContainersAsLevels") {
+      const allContainers = await db.select().from(containers);
+      const levels = allContainers.filter((container) =>
+        MEDICINE_LEVEL_CONTAINER_IDS.includes(
+          container.id as (typeof MEDICINE_LEVEL_CONTAINER_IDS)[number],
+        ),
+      );
+      const levelsToUpdate = levels.filter((container) => container.type !== "level");
+      for (const level of levelsToUpdate) {
+        await db
+          .update(containers)
+          .set({ type: "level", updatedAt: now() })
+          .where(eq(containers.id, level.id));
+      }
+      if (levelsToUpdate.length)
+        await log(db, {
+          action,
+          entityType: "container",
+          entityId: "medicine-level-containers",
+          entityName: "层级",
+          message: `将 ${levelsToUpdate.length} 个分层容器的类型改为「层级」`,
+          after: { updatedLevels: levelsToUpdate.length },
+        });
     } else if (action === "importMedicineCatalog") {
       const [existingRoomRows, existingContainerRows, existingItemRows] =
         await Promise.all([
@@ -575,7 +628,7 @@ export async function POST(request: Request) {
           roomId: targetRoomIds.get(container.roomId) ?? container.roomId,
           parentId: null,
           name: container.name,
-          type: "shelf",
+          type: "level",
           icon: container.icon,
           color: container.color,
           description: container.description,

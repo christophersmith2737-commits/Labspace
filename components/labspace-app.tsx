@@ -5,6 +5,7 @@ import {
   useEffect,
   useMemo,
   useState,
+  type DragEvent,
   type FormEvent,
   type ReactNode,
 } from "react";
@@ -28,6 +29,7 @@ import {
   FolderOpen,
   GlassWater,
   Grid2X2,
+  GripVertical,
   Hammer,
   History,
   LayoutDashboard,
@@ -89,6 +91,7 @@ const categories = [
 const units = ["g", "kg", "mg", "mL", "L", "瓶", "盒", "包", "个"];
 const containerTypes = [
   ["cabinet", "柜子", "Cabinet"],
+  ["level", "层级", "Archive"],
   ["desk", "桌子", "BriefcaseBusiness"],
   ["drawer", "抽屉", "Archive"],
   ["shelf", "架子", "Boxes"],
@@ -97,6 +100,8 @@ const containerTypes = [
   ["toolbox", "工具箱", "Wrench"],
   ["custom", "自定义", "Archive"],
 ];
+const containerTypeLabel = (type: string) =>
+  containerTypes.find(([value]) => value === type)?.[1] ?? "容器";
 const colors = [
   "#2563eb",
   "#0891b2",
@@ -371,6 +376,11 @@ type ModalState = null | {
   entity?: Room | ContainerNode | Item;
 };
 
+type DragPayload = {
+  kind: "item" | "container";
+  id: string;
+};
+
 export function LabSpaceApp() {
   const [data, setData] = useState<AppState | null>(null);
   const [error, setError] = useState("");
@@ -394,7 +404,7 @@ export function LabSpaceApp() {
           : "light")),
   );
   const [stockDraft, setStockDraft] = useState(100);
-  const [dragItemId, setDragItemId] = useState<string | null>(null);
+  const [dragged, setDragged] = useState<DragPayload | null>(null);
 
   const load = useCallback(async () => {
     try {
@@ -481,6 +491,15 @@ export function LabSpaceApp() {
   const medicineCatalogNeedsSync =
     data?.rooms.some((room) => room.id.startsWith("medicine-261021-room-")) ??
     false;
+  const medicineLevelsNeedType = useMemo(
+    () =>
+      data?.containers.some(
+        (container) =>
+          container.id.startsWith("medicine-261021-container-") &&
+          container.type !== "level",
+      ) ?? false,
+    [data],
+  );
 
   const containerPath = (containerId: string | null) => {
     const chain: ContainerNode[] = [];
@@ -512,6 +531,70 @@ export function LabSpaceApp() {
         }
     }
     return ids;
+  };
+
+  const beginDrag = (
+    event: DragEvent<HTMLElement>,
+    payload: DragPayload,
+  ) => {
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData("text/plain", `${payload.kind}:${payload.id}`);
+    setDragged(payload);
+  };
+
+  const moveDragged = async (
+    roomId: string,
+    containerId: string | null,
+  ) => {
+    if (!dragged || !data) return false;
+    if (dragged.kind === "container") {
+      const current = data.containers.find((item) => item.id === dragged.id);
+      if (!current) return false;
+      if (containerId && descendantsOf(current.id).has(containerId)) {
+        toast.error("不能把容器放进自身或它的子容器");
+        return false;
+      }
+      const targetContainer = containerId
+        ? data.containers.find((item) => item.id === containerId)
+        : null;
+      if (
+        current.type === "level" &&
+        targetContainer &&
+        targetContainer.type !== "cabinet"
+      ) {
+        toast.error("层级只能放进柜子容器");
+        return false;
+      }
+      if (current.roomId === roomId && current.parentId === containerId) {
+        toast.info("容器已经在这个位置");
+        return false;
+      }
+      const moved = await mutate(
+        "moveContainer",
+        { id: current.id, roomId, parentId: containerId },
+        containerId ? "容器已放入目标容器" : "容器已移动到目标房间",
+      );
+      if (moved) {
+        setActiveRoomId(roomId);
+        setActiveContainerId(containerId);
+      }
+      setDragged(null);
+      return moved;
+    }
+
+    const current = data.items.find((item) => item.id === dragged.id);
+    if (!current) return false;
+    if (current.roomId === roomId && current.containerId === containerId) {
+      toast.info("物品已经在这个位置");
+      return false;
+    }
+    const moved = await mutate(
+      "moveItem",
+      { id: current.id, roomId, containerId },
+      containerId ? "物品已放入目标容器" : "物品已移动到目标房间",
+    );
+    setDragged(null);
+    return moved;
   };
 
   const navigateRoom = (roomId: string) => {
@@ -642,16 +725,15 @@ export function LabSpaceApp() {
             <button
               key={room.id}
               onClick={() => navigateRoom(room.id)}
-              onDragOver={(e) => e.preventDefault()}
-              onDrop={() =>
-                dragItemId &&
-                void mutate(
-                  "moveItem",
-                  { id: dragItemId, roomId: room.id, containerId: null },
-                  "物品已移动",
-                )
-              }
-              className={`flex h-10 w-full items-center gap-3 rounded-xl px-3 text-left text-sm ${activeRoomId === room.id && view === "browse" ? "bg-[var(--panel-2)]" : "hover:bg-[var(--panel-2)]"}`}
+              onDragOver={(event) => {
+                event.preventDefault();
+                event.dataTransfer.dropEffect = "move";
+              }}
+              onDrop={(event) => {
+                event.preventDefault();
+                void moveDragged(room.id, null);
+              }}
+              className={`flex h-10 w-full items-center gap-3 rounded-xl px-3 text-left text-sm ${dragged ? "outline-dashed outline-1 outline-blue-300" : ""} ${activeRoomId === room.id && view === "browse" ? "bg-[var(--panel-2)]" : "hover:bg-[var(--panel-2)]"}`}
             >
               <span
                 className="h-2.5 w-2.5 rounded-full"
@@ -679,8 +761,16 @@ export function LabSpaceApp() {
             lowItems={lowItems}
             medicineCatalogCount={medicineCatalogCount}
             medicineCatalogNeedsSync={medicineCatalogNeedsSync}
+            medicineLevelsNeedType={medicineLevelsNeedType}
             onRoom={navigateRoom}
             onAddRoom={() => setModal({ type: "room" })}
+            onMarkMedicineContainersAsLevels={() =>
+              void mutate(
+                "markMedicineContainersAsLevels",
+                {},
+                "一层、二层等已设置为「层级」类型",
+              )
+            }
             onImportMedicineCatalog={() =>
               void mutate(
                 "importMedicineCatalog",
@@ -710,8 +800,10 @@ export function LabSpaceApp() {
             }}
             setModal={setModal}
             mutate={mutate}
-            dragItemId={dragItemId}
-            setDragItemId={setDragItemId}
+            dragged={dragged}
+            beginDrag={beginDrag}
+            endDrag={() => setDragged(null)}
+            moveDragged={moveDragged}
             descendantsOf={descendantsOf}
           />
         )}
@@ -736,6 +828,16 @@ export function LabSpaceApp() {
           />
         )}
       </main>
+
+      {dragged && (
+        <div
+          className="fixed bottom-24 left-1/2 z-[70] flex -translate-x-1/2 items-center gap-2 rounded-full bg-slate-900 px-4 py-2.5 text-sm font-medium text-white shadow-xl md:bottom-6 md:left-[calc(50%+110px)]"
+          aria-live="polite"
+        >
+          <GripVertical size={17} />
+          正在拖动{dragged.kind === "item" ? "物品" : "容器"}：放到左侧房间或目标容器
+        </div>
+      )}
 
       {selectedItem && (
         <DetailPanel
@@ -861,16 +963,20 @@ function Dashboard({
   lowItems,
   medicineCatalogCount,
   medicineCatalogNeedsSync,
+  medicineLevelsNeedType,
   onRoom,
   onAddRoom,
+  onMarkMedicineContainersAsLevels,
   onImportMedicineCatalog,
 }: {
   data: AppState;
   lowItems: Item[];
   medicineCatalogCount: number;
   medicineCatalogNeedsSync: boolean;
+  medicineLevelsNeedType: boolean;
   onRoom: (id: string) => void;
   onAddRoom: () => void;
+  onMarkMedicineContainersAsLevels: () => void;
   onImportMedicineCatalog: () => void;
 }) {
   return (
@@ -910,19 +1016,27 @@ function Dashboard({
                 105 药品柜 111 条 · 103 药品柜 40 条 · 共 8 个分区
               </p>
               <p className="muted mt-1 text-xs">
-                原名称与数量写法保留；疑似错别字未自动修改。
+                一层、二层保留名称，类型为「层级」，父容器为柜子。
               </p>
             </div>
           </div>
           <button
             type="button"
-            onClick={onImportMedicineCatalog}
+            onClick={
+              medicineLevelsNeedType
+                ? onMarkMedicineContainersAsLevels
+                : onImportMedicineCatalog
+            }
             disabled={
-              medicineCatalogCount >= 151 && !medicineCatalogNeedsSync
+              medicineCatalogCount >= 151 &&
+              !medicineCatalogNeedsSync &&
+              !medicineLevelsNeedType
             }
             className="h-11 shrink-0 rounded-xl bg-emerald-600 px-4 text-sm font-semibold text-white disabled:cursor-default disabled:bg-emerald-600/55"
           >
-            {medicineCatalogNeedsSync
+            {medicineLevelsNeedType
+              ? "应用层级类型"
+              : medicineCatalogNeedsSync
               ? "整理到 105 / 103"
               : medicineCatalogCount >= 151
                 ? "清单已导入"
@@ -1115,8 +1229,10 @@ function Browse({
   selectItem,
   setModal,
   mutate,
-  dragItemId,
-  setDragItemId,
+  dragged,
+  beginDrag,
+  endDrag,
+  moveDragged,
   descendantsOf,
 }: {
   data: AppState;
@@ -1134,8 +1250,13 @@ function Browse({
     p: Record<string, unknown>,
     m?: string,
   ) => Promise<boolean>;
-  dragItemId: string | null;
-  setDragItemId: (v: string | null) => void;
+  dragged: DragPayload | null;
+  beginDrag: (event: DragEvent<HTMLElement>, payload: DragPayload) => void;
+  endDrag: () => void;
+  moveDragged: (
+    roomId: string,
+    containerId: string | null,
+  ) => Promise<boolean>;
   descendantsOf: (id: string) => Set<string>;
 }) {
   if (!activeRoom)
@@ -1183,7 +1304,15 @@ function Browse({
           <div key={room.id}>
             <button
               onClick={() => navigateRoom(room.id)}
-              className={`flex w-full items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium ${room.id === activeRoom.id && !activeContainer ? "bg-[var(--blue-soft)] text-[var(--blue)]" : "hover:bg-[var(--panel-2)]"}`}
+              onDragOver={(event) => {
+                event.preventDefault();
+                event.dataTransfer.dropEffect = "move";
+              }}
+              onDrop={(event) => {
+                event.preventDefault();
+                void moveDragged(room.id, null);
+              }}
+              className={`flex w-full items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium ${dragged ? "outline-dashed outline-1 outline-blue-300" : ""} ${room.id === activeRoom.id && !activeContainer ? "bg-[var(--blue-soft)] text-[var(--blue)]" : "hover:bg-[var(--panel-2)]"}`}
             >
               <span
                 className="h-2 w-2 rounded-full"
@@ -1198,14 +1327,12 @@ function Browse({
                 data={data}
                 activeId={activeContainer?.id ?? null}
                 go={navigateContainer}
-                drop={async (c) => {
-                  if (dragItemId)
-                    await mutate(
-                      "moveItem",
-                      { id: dragItemId, roomId: c.roomId, containerId: c.id },
-                      "物品已移动",
-                    );
-                }}
+                dragged={dragged}
+                beginDrag={beginDrag}
+                endDrag={endDrag}
+                drop={(container) =>
+                  moveDragged(container.roomId, container.id)
+                }
               />
             )}
           </div>
@@ -1316,16 +1443,22 @@ function Browse({
               {childContainers.map((c) => (
                 <div
                   key={c.id}
-                  onDragOver={(e) => e.preventDefault()}
-                  onDrop={() =>
-                    dragItemId &&
-                    void mutate(
-                      "moveItem",
-                      { id: dragItemId, roomId: c.roomId, containerId: c.id },
-                      "物品已移动",
-                    )
+                  draggable
+                  onDragStart={(event) =>
+                    beginDrag(event, { kind: "container", id: c.id })
                   }
-                  className="card card-hover group relative"
+                  onDragEnd={endDrag}
+                  onDragOver={(event) => {
+                    event.preventDefault();
+                    event.dataTransfer.dropEffect = "move";
+                  }}
+                  onDrop={(event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    void moveDragged(c.roomId, c.id);
+                  }}
+                  className={`card card-hover group relative cursor-grab active:cursor-grabbing ${dragged?.kind === "container" && dragged.id === c.id ? "opacity-45" : ""} ${dragged && !(dragged.kind === "container" && dragged.id === c.id) ? "outline-dashed outline-2 outline-blue-300" : ""}`}
+                  title="拖动到房间或其他容器"
                 >
                   <button
                     onClick={() => navigateContainer(c)}
@@ -1340,6 +1473,7 @@ function Browse({
                     <div className="min-w-0">
                       <div className="truncate font-medium">{c.name}</div>
                       <div className="muted mt-1 text-xs">
+                        {containerTypeLabel(c.type)} ·{" "}
                         {
                           data.containers.filter((x) => x.parentId === c.id)
                             .length
@@ -1352,7 +1486,8 @@ function Browse({
                         物品
                       </div>
                     </div>
-                    <ChevronRight className="muted ml-auto" size={18} />
+                    <GripVertical className="muted ml-auto" size={17} />
+                    <ChevronRight className="muted" size={18} />
                   </button>
                   <div className="absolute right-2 top-2 hidden gap-1 group-hover:flex">
                     <button
@@ -1382,11 +1517,14 @@ function Browse({
               {visibleItems.map((item) => (
                 <button
                   draggable
-                  onDragStart={() => setDragItemId(item.id)}
-                  onDragEnd={() => setDragItemId(null)}
+                  onDragStart={(event) =>
+                    beginDrag(event, { kind: "item", id: item.id })
+                  }
+                  onDragEnd={endDrag}
                   key={item.id}
                   onClick={() => selectItem(item)}
-                  className="card card-hover p-4 text-left"
+                  className={`card card-hover cursor-grab p-4 text-left active:cursor-grabbing ${dragged?.kind === "item" && dragged.id === item.id ? "opacity-45" : ""}`}
+                  title="拖动到房间或容器"
                 >
                   <div className="flex items-start gap-3">
                     <div
@@ -1452,6 +1590,9 @@ function Tree({
   data,
   activeId,
   go,
+  dragged,
+  beginDrag,
+  endDrag,
   drop,
   depth = 0,
 }: {
@@ -1460,7 +1601,10 @@ function Tree({
   data: AppState;
   activeId: string | null;
   go: (c: ContainerNode) => void;
-  drop: (c: ContainerNode) => void;
+  dragged: DragPayload | null;
+  beginDrag: (event: DragEvent<HTMLElement>, payload: DragPayload) => void;
+  endDrag: () => void;
+  drop: (c: ContainerNode) => void | Promise<boolean>;
   depth?: number;
 }) {
   const nodes = data.containers.filter(
@@ -1471,11 +1615,24 @@ function Tree({
       {nodes.map((c) => (
         <div key={c.id}>
           <button
+            draggable
             onClick={() => go(c)}
-            onDragOver={(e) => e.preventDefault()}
-            onDrop={() => drop(c)}
+            onDragStart={(event) =>
+              beginDrag(event, { kind: "container", id: c.id })
+            }
+            onDragEnd={endDrag}
+            onDragOver={(event) => {
+              event.preventDefault();
+              event.dataTransfer.dropEffect = "move";
+            }}
+            onDrop={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              void drop(c);
+            }}
             style={{ paddingLeft: 12 + depth * 14 }}
-            className={`mt-0.5 flex w-full items-center gap-2 rounded-xl py-2 pr-2 text-left text-sm ${activeId === c.id ? "bg-[var(--blue-soft)] text-[var(--blue)]" : "muted hover:bg-[var(--panel-2)]"}`}
+            className={`mt-0.5 flex w-full cursor-grab items-center gap-2 rounded-xl py-2 pr-2 text-left text-sm active:cursor-grabbing ${dragged?.kind === "container" && dragged.id === c.id ? "opacity-45" : ""} ${dragged && !(dragged.kind === "container" && dragged.id === c.id) ? "outline-dashed outline-1 outline-blue-300" : ""} ${activeId === c.id ? "bg-[var(--blue-soft)] text-[var(--blue)]" : "muted hover:bg-[var(--panel-2)]"}`}
+            title={`${containerTypeLabel(c.type)} · 可拖动`}
           >
             <Icon name={c.icon} size={15} />
             <span className="truncate">{c.name}</span>
@@ -1486,6 +1643,9 @@ function Tree({
             data={data}
             activeId={activeId}
             go={go}
+            dragged={dragged}
+            beginDrag={beginDrag}
+            endDrag={endDrag}
             drop={drop}
             depth={depth + 1}
           />
