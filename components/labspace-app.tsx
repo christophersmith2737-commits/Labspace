@@ -363,12 +363,18 @@ function stockColor(value: number) {
   return value <= 20 ? "#ef4444" : value < 60 ? "#eab308" : "#22c55e";
 }
 function dateText(value: string) {
+  const hasTimeZone = /(?:Z|[+-]\d{2}:?\d{2})$/i.test(value);
+  const normalized = hasTimeZone
+    ? value
+    : `${value.replace(" ", "T")}Z`;
   return new Intl.DateTimeFormat("zh-CN", {
+    timeZone: "Asia/Shanghai",
     month: "numeric",
     day: "numeric",
     hour: "2-digit",
     minute: "2-digit",
-  }).format(new Date(value));
+    hour12: false,
+  }).format(new Date(normalized));
 }
 
 type ModalState = null | {
@@ -979,6 +985,27 @@ function Dashboard({
   onMarkMedicineContainersAsLevels: () => void;
   onImportMedicineCatalog: () => void;
 }) {
+  const medicineCatalogNeedsAction =
+    medicineCatalogCount < 151 ||
+    medicineCatalogNeedsSync ||
+    medicineLevelsNeedType;
+  const [catalogNoticeDismissed, setCatalogNoticeDismissed] = useState(false);
+
+  useEffect(() => {
+    if (medicineCatalogNeedsAction) {
+      setCatalogNoticeDismissed(false);
+      return;
+    }
+    setCatalogNoticeDismissed(
+      window.localStorage.getItem("labspace-catalog-notice-dismissed") === "1",
+    );
+  }, [medicineCatalogNeedsAction]);
+
+  const dismissCatalogNotice = () => {
+    setCatalogNoticeDismissed(true);
+    window.localStorage.setItem("labspace-catalog-notice-dismissed", "1");
+  };
+
   return (
     <div className="mx-auto max-w-[1220px] p-5 pb-28 md:p-8">
       <div className="mb-8 flex items-end justify-between gap-4">
@@ -999,53 +1026,56 @@ function Dashboard({
           新建房间
         </button>
       </div>
-      <section className="card mb-5 overflow-hidden border-emerald-200/70 bg-gradient-to-br from-emerald-50/90 to-cyan-50/70 p-5 dark:border-emerald-900/70 dark:from-emerald-950/25 dark:to-cyan-950/20">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex min-w-0 items-start gap-4">
-            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-emerald-600 text-white">
-              <FileSpreadsheet size={23} />
+      {!catalogNoticeDismissed && (
+        <aside className="fixed inset-x-4 top-20 z-40 rounded-2xl border border-emerald-200 bg-white/95 p-4 shadow-xl shadow-emerald-950/10 backdrop-blur dark:border-emerald-900 dark:bg-slate-950/95 sm:left-auto sm:right-6 sm:w-[360px]">
+          <div className="flex items-start gap-3">
+            <div className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-emerald-600 text-white">
+              <FileSpreadsheet size={20} />
             </div>
-            <div className="min-w-0">
-              <div className="flex flex-wrap items-center gap-2">
-                <h2 className="font-semibold">261021 更新药品清单</h2>
-                <span className="rounded-full bg-white/80 px-2 py-1 text-xs font-medium text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300">
-                  已录入 {medicineCatalogCount}/151
-                </span>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <h2 className="text-sm font-semibold">261021 更新药品清单</h2>
+                  <p className="mt-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-300">
+                    已录入 {medicineCatalogCount}/151
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={dismissCatalogNotice}
+                  aria-label="关闭清单导入提示"
+                  className="muted -mr-1 -mt-1 grid h-8 w-8 shrink-0 place-items-center rounded-lg transition hover:bg-slate-100 hover:text-slate-950 dark:hover:bg-slate-800 dark:hover:text-white"
+                >
+                  <X size={17} />
+                </button>
               </div>
-              <p className="muted mt-1 text-sm">
+              <p className="muted mt-2 text-xs leading-5">
                 105 药品柜 111 条 · 103 药品柜 40 条 · 共 8 个分区
               </p>
-              <p className="muted mt-1 text-xs">
-                一层、二层保留名称，类型为「层级」，父容器为柜子。
-              </p>
+              <button
+                type="button"
+                onClick={
+                  medicineLevelsNeedType
+                    ? onMarkMedicineContainersAsLevels
+                    : onImportMedicineCatalog
+                }
+                disabled={!medicineCatalogNeedsAction}
+                className="mt-3 h-9 rounded-lg bg-emerald-600 px-3 text-xs font-semibold text-white disabled:cursor-default disabled:bg-emerald-600/60"
+              >
+                {medicineLevelsNeedType
+                  ? "应用层级类型"
+                  : medicineCatalogNeedsSync
+                    ? "整理到 105 / 103"
+                    : medicineCatalogCount >= 151
+                      ? "清单已导入"
+                      : medicineCatalogCount
+                        ? "补齐缺失条目"
+                        : "导入到 LabSpace"}
+              </button>
             </div>
           </div>
-          <button
-            type="button"
-            onClick={
-              medicineLevelsNeedType
-                ? onMarkMedicineContainersAsLevels
-                : onImportMedicineCatalog
-            }
-            disabled={
-              medicineCatalogCount >= 151 &&
-              !medicineCatalogNeedsSync &&
-              !medicineLevelsNeedType
-            }
-            className="h-11 shrink-0 rounded-xl bg-emerald-600 px-4 text-sm font-semibold text-white disabled:cursor-default disabled:bg-emerald-600/55"
-          >
-            {medicineLevelsNeedType
-              ? "应用层级类型"
-              : medicineCatalogNeedsSync
-              ? "整理到 105 / 103"
-              : medicineCatalogCount >= 151
-                ? "清单已导入"
-                : medicineCatalogCount
-                  ? "补齐缺失条目"
-                  : "导入到 LabSpace"}
-          </button>
-        </div>
-      </section>
+        </aside>
+      )}
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         <Stat
           label="房间"
