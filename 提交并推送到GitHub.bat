@@ -1,28 +1,28 @@
 @echo off
-chcp 65001 >nul
 cd /d "%~dp0"
 
 git remote get-url origin >nul 2>&1
 if errorlevel 1 (
-  echo [错误] 尚未连接 GitHub。请先运行“连接GitHub仓库.bat”。
+  echo [ERROR] No GitHub repository is connected.
+  echo Run the GitHub connection batch file first.
   pause
   exit /b 1
 )
 
-echo 第一步：检查网站能否正常构建...
-call npm run build
+echo Step 1: Building and checking the website...
+call npm.cmd run build
 if errorlevel 1 (
   echo.
-  echo [停止] 构建失败，没有提交或推送任何内容。
+  echo [STOPPED] Build failed. Nothing was committed or pushed.
   pause
   exit /b 1
 )
 
 echo.
-echo 第二步：查看本次更改...
+echo Step 2: Reviewing changed files...
 git status --short
 echo.
-set /p COMMIT_MSG=请输入本次修改说明（直接回车使用默认说明）：
+set /p "COMMIT_MSG=Enter a short change description or press Enter for the default: "
 if "%COMMIT_MSG%"=="" set "COMMIT_MSG=Update LabSpace"
 
 git add -A
@@ -30,24 +30,24 @@ git diff --cached --quiet
 if errorlevel 1 (
   git commit -m "%COMMIT_MSG%"
   if errorlevel 1 (
-    echo [错误] Git 提交失败。
+    echo [ERROR] Git commit failed.
     pause
     exit /b 1
   )
 ) else (
-  echo 没有新的文件需要提交，将直接同步已有提交。
+  echo There are no new files to commit. Existing commits will be pushed.
 )
 
 echo.
-echo 第三步：推送到 GitHub...
+echo Step 3: Pushing to GitHub...
 git push -u origin main
 if errorlevel 1 (
   echo.
-  echo [错误] 推送失败。首次推送时可能需要在浏览器中登录 GitHub。
+  echo [ERROR] Push failed. The first push may require GitHub browser sign-in.
   pause
   exit /b 1
 )
 
 echo.
-echo [完成] 本地修改已经推送到 GitHub。
+echo [DONE] Local changes were pushed to GitHub.
 pause

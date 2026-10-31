@@ -1,22 +1,21 @@
 @echo off
-chcp 65001 >nul
 cd /d "%~dp0"
 
-echo 请先在 GitHub 创建一个“空的私有仓库”，不要勾选 README、License 或 .gitignore。
-echo 然后复制仓库的 HTTPS 地址，例如：
-echo https://github.com/你的用户名/LabSpace.git
+echo First create an empty private repository on GitHub.
+echo Do not initialize it with a README, License, or .gitignore.
+echo Example URL: https://github.com/USERNAME/LabSpace.git
 echo.
-set /p REPO_URL=请输入 GitHub 仓库地址：
+set /p "REPO_URL=Enter the GitHub HTTPS repository URL: "
 
 if "%REPO_URL%"=="" (
-  echo [取消] 没有输入仓库地址。
+  echo [CANCELLED] No repository URL was entered.
   pause
   exit /b 1
 )
 
 echo %REPO_URL% | findstr /R /I "^https://github.com/.*\.git$" >nul
 if errorlevel 1 (
-  echo [错误] 请输入以 https://github.com/ 开头、以 .git 结尾的仓库地址。
+  echo [ERROR] The URL must start with https://github.com/ and end with .git
   pause
   exit /b 1
 )
@@ -25,11 +24,11 @@ git remote get-url origin >nul 2>&1
 if errorlevel 1 (
   git remote add origin "%REPO_URL%"
 ) else (
-  echo 当前 origin：
+  echo Current origin:
   git remote get-url origin
-  set /p REPLACE_ORIGIN=是否替换为新地址？输入 Y 确认：
+  set /p "REPLACE_ORIGIN=Replace it with the new URL? Enter Y to confirm: "
   if /I not "%REPLACE_ORIGIN%"=="Y" (
-    echo [取消] 未修改 GitHub 地址。
+    echo [CANCELLED] The GitHub URL was not changed.
     pause
     exit /b 0
   )
@@ -38,8 +37,8 @@ if errorlevel 1 (
 
 git branch -M main
 echo.
-echo GitHub 仓库已经连接：
+echo GitHub repository connected:
 git remote -v
 echo.
-echo 现在可以运行“提交并推送到GitHub.bat”。
+echo Next, run the GitHub push batch file.
 pause
