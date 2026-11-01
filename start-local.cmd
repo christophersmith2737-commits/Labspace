@@ -36,6 +36,13 @@ if not exist "node_modules\vinext\package.json" (
   exit /b 1
 )
 
+node scripts\bootstrap-local-database.mjs
+if errorlevel 1 (
+  echo [ERROR] The local database could not be prepared.
+  pause
+  exit /b 1
+)
+
 echo Starting the LabSpace local edition...
 echo URL: %LABSPACE_URL%
 echo Keep this window open. Press Ctrl+C to stop the local server.

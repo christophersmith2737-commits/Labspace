@@ -9,7 +9,17 @@ if errorlevel 1 (
   exit /b 1
 )
 
-echo Step 1: Building and checking the website...
+echo Step 1: Exporting the current local database snapshot...
+node scripts\export-local-database.mjs
+if errorlevel 1 (
+  echo.
+  echo [STOPPED] Database export failed. Nothing was committed or pushed.
+  pause
+  exit /b 1
+)
+
+echo.
+echo Step 2: Building and checking the website...
 call npm.cmd run build
 if errorlevel 1 (
   echo.
@@ -19,7 +29,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo Step 2: Reviewing changed files...
+echo Step 3: Reviewing changed files...
 git status --short
 echo.
 set /p "COMMIT_MSG=Enter a short change description or press Enter for the default: "
@@ -39,7 +49,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo Step 3: Pushing to GitHub...
+echo Step 4: Pushing to GitHub...
 git push -u origin main
 if errorlevel 1 (
   echo.
